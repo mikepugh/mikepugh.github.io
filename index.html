@@ -1,193 +1,841 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerTread - Conquer Any Course, Indoors.</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <!-- For Apple devices -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background for a tech feel */
-            color: #e0e6ed; /* Light text for contrast */
-        }
-        .gradient-bg {
-            background: linear-gradient(to right, #1a202c, #2d3748);
-        }
-        .btn-primary {
-            background-color: #3b82f6; /* Blue for primary actions */
-            color: white;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #2563eb;
-        }
-        .feature-icon {
-            width: 64px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #3b82f6;
-            border-radius: 50%;
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .section-heading {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #e0e6ed;
-            margin-bottom: 2rem;
-        }
-        .footer-link {
-            color: #9ca3af;
-            transition: color 0.3s ease;
-        }
-        .footer-link:hover {
-            color: #e0e6ed;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerTread - Conquer Any Course, Indoors.</title>
+  <meta name="description" content="PowerTread delivers real-world course simulation, structured workouts, incline-adjusted power, and activity sync for indoor runners.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-0: #040915;
+      --bg-1: #071338;
+      --bg-2: #0c1f4d;
+      --panel: rgba(22, 35, 76, 0.78);
+      --panel-strong: rgba(21, 35, 80, 0.92);
+      --stroke: rgba(108, 154, 255, 0.3);
+      --text: #eaf1ff;
+      --muted: #a8bbeb;
+      --blue: #54c6ff;
+      --green: #39da76;
+      --orange: #ff9a34;
+      --max: 1580px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background:
+        radial-gradient(circle at 16% 8%, rgba(41, 87, 190, 0.45) 0%, rgba(41, 87, 190, 0) 38%),
+        radial-gradient(circle at 95% 2%, rgba(18, 53, 136, 0.45) 0%, rgba(18, 53, 136, 0) 35%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-0) 74%);
+      line-height: 1.45;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - clamp(1rem, 3.6vw, 4rem)));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.2rem 0 1.8rem;
+    }
+
+    .topbar {
+      border: 1px solid rgba(109, 152, 255, 0.25);
+      border-radius: 22px;
+      padding: 0.5rem 0.75rem;
+      background: linear-gradient(90deg, rgba(14, 25, 58, 0.78) 0%, rgba(13, 25, 59, 0.45) 100%);
+      backdrop-filter: blur(8px);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .chip,
+    .button {
+      border: 1px solid var(--stroke);
+      background: rgba(24, 39, 86, 0.75);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.48rem 0.88rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: transform 140ms ease, border-color 140ms ease;
+      cursor: pointer;
+    }
+
+    nav a:hover,
+    .button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(84, 198, 255, 0.8);
+    }
+
+    .status {
+      justify-self: end;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8fd6ff;
+      border: 1px solid rgba(84, 198, 255, 0.35);
+      background: rgba(15, 56, 96, 0.4);
+      border-radius: 999px;
+      padding: 0.46rem 0.74rem;
+      white-space: nowrap;
+    }
+
+    .hero {
+      margin-top: 1.1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.35rem;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      border: 1px solid var(--stroke);
+      border-radius: 30px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      min-height: clamp(360px, 41vw, 620px);
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .hero-copy {
+      padding: clamp(1.1rem, 3vw, 2.4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.7rem;
+      color: #9bdfff;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 4.2rem);
+      line-height: 1.02;
+      margin-bottom: 0.95rem;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.35vw, 1.5rem);
+      max-width: 34ch;
+    }
+
+    .hero-actions {
+      margin-top: 1.35rem;
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .button.primary {
+      background: linear-gradient(120deg, #29bbff, #2a86ff);
+      color: #07254a;
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    .pill-row {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      font-size: 0.77rem;
+      color: #bcd0ff;
+      padding: 0.4rem 0.72rem;
+    }
+
+    .hero-shot {
+      padding: clamp(0.65rem, 1.1vw, 1.05rem);
+      background: linear-gradient(165deg, rgba(20, 35, 81, 0.95) 0%, rgba(8, 18, 45, 0.95) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-shot img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 24px 46px rgba(2, 5, 15, 0.5);
+    }
+
+    main { padding-bottom: 3rem; }
+
+    section { margin-top: 3.3rem; }
+
+    .section-head {
+      margin-bottom: 1.15rem;
+      max-width: 78ch;
+    }
+
+    .section-kicker {
+      margin: 0 0 0.4rem;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+      line-height: 1.05;
+      margin-bottom: 0.45rem;
+    }
+
+    .section-subtitle {
+      margin: 0;
+      color: var(--muted);
+      max-width: 74ch;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .feature {
+      border-radius: 22px;
+      border: 1px solid rgba(113, 148, 255, 0.25);
+      background: linear-gradient(165deg, rgba(20, 34, 76, 0.95) 0%, rgba(12, 24, 57, 0.96) 100%);
+      padding: 1.15rem;
+      min-height: 210px;
+    }
+
+    .feature .tag {
+      display: inline-block;
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 700;
+      border-radius: 7px;
+      padding: 0.22rem 0.45rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .tag.blue { background: rgba(84, 198, 255, 0.15); color: #9ce4ff; }
+    .tag.green { background: rgba(57, 218, 118, 0.15); color: #9bf5be; }
+    .tag.orange { background: rgba(255, 154, 52, 0.15); color: #ffc68f; }
+
+    .feature h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .showcase-band {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+      padding: 2.4rem clamp(1rem, 3.2vw, 4rem);
+      background:
+        radial-gradient(circle at 90% 40%, rgba(33, 92, 201, 0.24) 0%, rgba(33, 92, 201, 0) 42%),
+        linear-gradient(180deg, rgba(8, 16, 40, 0.45) 0%, rgba(6, 13, 33, 0.95) 100%);
+      border-top: 1px solid rgba(113, 148, 255, 0.22);
+      border-bottom: 1px solid rgba(113, 148, 255, 0.22);
+    }
+
+    .showcase-wrap {
+      width: min(var(--max), calc(100% - clamp(0rem, 0vw, 0rem)));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+      gap: 1.1rem;
+      align-items: start;
+    }
+
+    .showcase-media {
+      position: sticky;
+      top: 1.2rem;
+      min-height: min(74vh, 760px);
+      border-radius: 28px;
+      border: 1px solid rgba(115, 151, 255, 0.26);
+      background: rgba(14, 25, 56, 0.76);
+      padding: 0.95rem;
+      overflow: hidden;
+    }
+
+    .showcase-image {
+      position: absolute;
+      inset: 0.95rem;
+      margin: 0;
+      opacity: 0;
+      transform: scale(0.985);
+      transition: opacity 320ms ease, transform 420ms ease;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .showcase-image.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .showcase-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      object-fit: contain;
+      display: block;
+      box-shadow: 0 20px 40px rgba(2, 8, 22, 0.5);
+    }
+
+    .showcase-image figcaption {
+      color: #bfd0f8;
+      font-size: 0.86rem;
+      margin-top: 0.15rem;
+    }
+
+    .showcase-steps {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .showcase-step {
+      border-radius: 22px;
+      border: 1px solid rgba(113, 148, 255, 0.24);
+      background: rgba(16, 29, 66, 0.78);
+      padding: 1.15rem;
+      min-height: min(62vh, 460px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: border-color 240ms ease, background 240ms ease;
+    }
+
+    .showcase-step.active {
+      border-color: rgba(84, 198, 255, 0.7);
+      background: rgba(15, 32, 74, 0.95);
+    }
+
+    .showcase-step h3 {
+      font-size: clamp(1.15rem, 1.7vw, 1.7rem);
+      margin-bottom: 0.45rem;
+    }
+
+    .showcase-step p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 44ch;
+    }
+
+    .showcase-carousel {
+      display: none;
+      width: min(var(--max), 100%);
+      margin: 0 auto;
+    }
+
+    .carousel-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: min(86vw, 560px);
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 0.2rem 0.2rem 0.8rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .carousel-track::-webkit-scrollbar-thumb {
+      background: rgba(112, 153, 255, 0.45);
+      border-radius: 999px;
+    }
+
+    .carousel-track::-webkit-scrollbar-track {
+      background: rgba(9, 17, 40, 0.7);
+      border-radius: 999px;
+    }
+
+    .carousel-slide {
+      scroll-snap-align: start;
+      border-radius: 24px;
+      border: 1px solid rgba(113, 148, 255, 0.25);
+      background: rgba(13, 25, 58, 0.85);
+      padding: 0.9rem;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      object-fit: contain;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 18px 36px rgba(2, 8, 22, 0.45);
+    }
+
+    .carousel-slide h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .carousel-slide p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .compat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .compat-card {
+      border-radius: 22px;
+      border: 1px solid rgba(113, 148, 255, 0.24);
+      background: linear-gradient(165deg, rgba(20, 34, 76, 0.95) 0%, rgba(12, 24, 57, 0.96) 100%);
+      padding: 1.15rem;
+    }
+
+    .compat-card h3 {
+      margin-bottom: 0.65rem;
+      font-size: 1.15rem;
+    }
+
+    .compat-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .compat-card li + li { margin-top: 0.35rem; }
+
+    .faq {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    details {
+      border-radius: 16px;
+      border: 1px solid rgba(113, 148, 255, 0.24);
+      background: rgba(15, 27, 62, 0.7);
+      padding: 0.9rem 1rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.96rem;
+      color: #dce8ff;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .faq-answer {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1.8rem 0 2.8rem;
+      border-top: 1px solid rgba(113, 148, 255, 0.22);
+      color: #8ea3d7;
+      font-size: 0.83rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: #bad4ff;
+      text-decoration: none;
+      margin: 0 0.45rem;
+    }
+
+    @media (max-width: 1220px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .showcase-wrap {
+        display: none;
+      }
+
+      .showcase-carousel {
+        display: block;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0.7rem;
+      }
+
+      .status { justify-self: center; }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .compat-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-band {
+        padding: 1.5rem 0.9rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-copy p {
+        max-width: none;
+      }
+    }
+  </style>
 </head>
-<body class="antialiased">
-    <!-- Header/Hero Section -->
-    <header class="relative overflow-hidden py-16 md:py-24 text-center gradient-bg">
-        <div class="container mx-auto px-4 relative z-10">
-            <img src="images/PowerTread-appicon-dark.png" alt="PowerTread Logo" class="mx-auto mb-6 w-24 h-24 rounded-2xl shadow-lg">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
-                PowerTread: Conquer Any Course, Indoors.
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Unleash the full potential of your smart treadmill. Simulate real-world GPX courses, train smarter, and optimize your running power.
-            </p>
-            <a href="#features" class="btn-primary inline-block">Discover Features</a>
+<body>
+  <header class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <img src="latest-appicon.png" alt="PowerTread app icon">
+        <span>PowerTread</span>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#showcase">Gallery</a>
+        <a href="#compatibility">Compatibility</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="status">App Store Launch Soon</div>
+    </div>
+
+    <section class="hero">
+      <article class="hero-card hero-copy">
+        <p class="eyebrow">Indoor Training, Reimagined</p>
+        <h1>PowerTread: Conquer Any Course, Indoors.</h1>
+        <p>Unleash the full potential of your smart treadmill. Simulate real-world GPX courses, train smarter, and optimize your running power.</p>
+        <div class="pill-row">
+          <span class="chip">FTMS Treadmill Control</span>
+          <span class="chip">Structured Workouts</span>
+          <span class="chip">Stryd Power Support</span>
+          <span class="chip">Activity Sync</span>
         </div>
-        <!-- Background pattern/illustration -->
-        <div class="absolute inset-0 z-0 opacity-10">
-            <img src="images/power-tread-large.webp" alt="Background illustration of treadmill and mountains" class="w-full h-full object-cover">
+        <div class="hero-actions">
+          <a class="button primary" href="#features">Discover Features</a>
+          <a class="button" href="#showcase">Explore Screens</a>
         </div>
-    </header>
+      </article>
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 md:py-24 bg-gray-900">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="section-heading">Key Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Feature 1: GPX Course Simulation -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0L6.343 16.657m11.314-11.314L12.757 3.09a1.998 1.998 0 00-2.828 0L6.343 5.343m11.314 11.314A9.995 9.995 0 0112 21.5c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">GPX Course Simulation</h3>
-                    <p class="text-gray-400">Load any GPX file and let PowerTread auto-adjust your treadmill's incline to perfectly simulate the course's terrain. Train for your next race, no matter where you live.</p>
-                </div>
+      <figure class="hero-card hero-shot">
+        <img src="screenshots/course-simulation.png" alt="PowerTread course simulation in-progress run view">
+      </figure>
+    </section>
+  </header>
 
-                <!-- Feature 2: Smart Incline Adjustment -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Dynamic Incline Control</h3>
-                    <p class="text-gray-400">Experience realistic elevation changes as PowerTread automatically controls your FTMS compatible treadmill's incline, mirroring every hill and descent.</p>
-                </div>
+  <main class="shell">
+    <section id="features">
+      <div class="section-head">
+        <p class="section-kicker">Core Features</p>
+        <h2 class="section-title">Everything needed for high-quality indoor run sessions</h2>
+        <p class="section-subtitle">PowerTread brings together terrain simulation, structured training, and connected activity sync in one focused running app.</p>
+      </div>
 
-                <!-- Feature 3: Stryd Power Meter Integration -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Stryd Power Integration</h3>
-                    <p class="text-gray-400">Connect your Stryd Running Power Meter for on-screen power display, with values intelligently adjusted based on the treadmill's current incline for accurate training.</p>
-                </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="tag blue">Simulation</span>
+          <h3>Real-World Course Simulation</h3>
+          <p>Import outdoor routes and simulate elevation changes indoors on FTMS-compatible treadmills, so your training profile matches the real course.</p>
+        </article>
 
-                <!-- Feature 4: Passive Mode for Zwift -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Passive Mode & Zwift Compatibility</h3>
-                    <p class="text-gray-400">Let other apps control incline while PowerTread records incline-adjusted running power, perfect for Stryd users on platforms like Zwift.</p>
-                </div>
+        <article class="feature">
+          <span class="tag green">Stryd</span>
+          <h3>Automatic Incline-Adjusted Power</h3>
+          <p>Power values adapt to treadmill incline automatically, delivering more meaningful power guidance for Stryd-based training.</p>
+        </article>
 
-                <!-- Feature 5: Wahoo KICKR Run Optimization -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5l-1-1H9l-1 1v5m3 0h.01M12 12h.01M12 15h.01M12 18h.01" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Optimized for KICKR Run</h3>
-                    <p class="text-gray-400">PowerTread delivers its best performance when paired with the Wahoo KICKR Run treadmill, offering seamless integration and an unparalleled training experience.</p>
-                </div>
+        <article class="feature">
+          <span class="tag orange">Workouts</span>
+          <h3>Structured Workout Support</h3>
+          <p>Execute planned intervals and workout blocks while still running a simulated route, combining specificity and realism in one session.</p>
+        </article>
 
-                <!-- Feature 6: iOS App -->
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-3 text-white">Available on iOS</h3>
-                    <p class="text-gray-400">Designed specifically for iOS, PowerTread provides an intuitive and powerful experience on your iPhone or iPad.</p>
-                </div>
-            </div>
-        </div>
+        <article class="feature">
+          <span class="tag blue">Sync</span>
+          <h3>Activity Push to Connected Platforms</h3>
+          <p>Sync completed activities with services like Strava and Intervals.icu to keep your indoor runs connected to your broader training ecosystem.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- App Screenshot Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="section-heading">See PowerTread in Action</h2>            
-            <p class="text-gray-400 my-6 text-lg">A sneak peek at the pre-release developer interface, showcasing real-time data and course simulation.</p>
-            <div class="flex justify-center">
-                <img src="images/latest-screenshot.png" alt="PowerTread App Screenshot" class="rounded-xl shadow-2xl max-w-full h-auto" style="max-width: 800px;">
-            </div>
-            <p class="text-gray-400 my-6 text-lg">Automated Power adjustments based upon the treadmill's reported incline, notice the lower power at a negative incline for roughly the same pace as the prior screenshot.</p>
-            <div class="flex justify-center">
-                <img src="images/negative-incline.png" alt="PowerTread App Screenshot" class="rounded-xl shadow-2xl max-w-full h-auto" style="max-width: 800px;">
-            </div>
-            
-            
+    <section id="showcase" class="showcase-band">
+      <div class="showcase-wrap">
+        <div class="showcase-media" aria-live="polite">
+          <figure class="showcase-image active" data-image="1">
+            <img src="screenshots/personal-course-library.png" alt="PowerTread course library with saved and featured routes">
+            <figcaption>Build a personal course library for targeted race and route prep.</figcaption>
+          </figure>
+          <figure class="showcase-image" data-image="2">
+            <img src="screenshots/view-todays-planned-workouts.png" alt="PowerTread workout library with planned sessions">
+            <figcaption>Pull planned workouts and choose the right session for today.</figcaption>
+          </figure>
+          <figure class="showcase-image" data-image="3">
+            <img src="screenshots/course-simulation.png" alt="PowerTread live course simulation with metrics and profile chart">
+            <figcaption>Run immersive live simulations with continuous terrain feedback.</figcaption>
+          </figure>
+          <figure class="showcase-image" data-image="4">
+            <img src="screenshots/structured-workouts-main.png" alt="PowerTread structured workout execution while running">
+            <figcaption>Stay on target with guided workout steps during your run.</figcaption>
+          </figure>
         </div>
+
+        <div class="showcase-steps">
+          <article class="showcase-step active" data-step="1">
+            <p class="section-kicker">Library</p>
+            <h3>Curate race routes and favorite courses</h3>
+            <p>Create a personal route catalog from your own files and connected services so quality sessions are always ready when you step on the treadmill.</p>
+          </article>
+
+          <article class="showcase-step" data-step="2">
+            <p class="section-kicker">Planning</p>
+            <h3>Bring in planned workouts from your training stack</h3>
+            <p>View scheduled sessions in a clean workout library, choose what to run, and move from planning to execution without app-hopping.</p>
+          </article>
+
+          <article class="showcase-step" data-step="3">
+            <p class="section-kicker">Execution</p>
+            <h3>Feel the terrain with automatic FTMS incline control</h3>
+            <p>PowerTread translates course elevation into treadmill incline changes, creating realistic pacing and effort shifts that mirror outdoor routes.</p>
+          </article>
+
+          <article class="showcase-step" data-step="4">
+            <p class="section-kicker">Workout Mode</p>
+            <h3>Combine route simulation and structured intervals</h3>
+            <p>Run specific interval targets while terrain simulation continues in the background, enabling precise sessions without losing course context.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="showcase-carousel" aria-label="PowerTread feature gallery">
+        <div class="carousel-track">
+          <article class="carousel-slide">
+            <img src="screenshots/personal-course-library.png" alt="PowerTread course library with saved and featured routes">
+            <p class="section-kicker">Library</p>
+            <h3>Curate race routes and favorite courses</h3>
+            <p>Create a personal route catalog from your own files and connected services so quality sessions are always ready when you step on the treadmill.</p>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="screenshots/view-todays-planned-workouts.png" alt="PowerTread workout library with planned sessions">
+            <p class="section-kicker">Planning</p>
+            <h3>Bring in planned workouts from your training stack</h3>
+            <p>View scheduled sessions in a clean workout library, choose what to run, and move from planning to execution without app-hopping.</p>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="screenshots/course-simulation.png" alt="PowerTread live course simulation with metrics and profile chart">
+            <p class="section-kicker">Execution</p>
+            <h3>Feel the terrain with automatic FTMS incline control</h3>
+            <p>PowerTread translates course elevation into treadmill incline changes, creating realistic pacing and effort shifts that mirror outdoor routes.</p>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="screenshots/structured-workouts-main.png" alt="PowerTread structured workout execution while running">
+            <p class="section-kicker">Workout Mode</p>
+            <h3>Combine route simulation and structured intervals</h3>
+            <p>Run specific interval targets while terrain simulation continues in the background, enabling precise sessions without losing course context.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Call to Action / Beta Section -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="section-heading">Join the PowerTread Journey</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We're ready to bring in beta testers! Sign up now to be among the first to experience PowerTread and help shape its future.
-            </p>
-            <a href="https://forms.gle/NbX3LNNogmwu6bkdA" target="_blank" class="btn-primary inline-block">Request Beta Access</a>
-            <p class="text-gray-400 mt-4 text-sm">For beta testing inquiries, please email <a href="mailto:beta@powertread.fit" class="underline footer-link">beta@powertread.fit</a></p>
-        </div>
+    <section id="compatibility">
+      <div class="section-head">
+        <p class="section-kicker">Compatibility</p>
+        <h2 class="section-title">Supported devices and integrations</h2>
+        <p class="section-subtitle">PowerTread is designed to work with modern FTMS treadmill hardware and running power sensors.</p>
+      </div>
+
+      <div class="compat-grid">
+        <article class="compat-card">
+          <h3>Treadmills</h3>
+          <ul>
+            <li>Wahoo KICKR RUN</li>
+            <li>Sole F63</li>
+            <li>Titan Life T73</li>
+            <li>Sportstech F37f</li>
+            <li>Other FTMS-compatible treadmills</li>
+          </ul>
+        </article>
+
+        <article class="compat-card">
+          <h3>Power Meters</h3>
+          <ul>
+            <li>Stryd running power meters</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 py-12 text-center text-gray-500 text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2026 NoVa Solutions Group, LLC. All rights reserved. PowerTread is a trademark of NoVa Solutions Group, LLC.</p>
-            <div class="mt-4 space-x-4">
-                <a href="privacy.html" class="footer-link">Privacy Policy</a>
-                <a href="terms.html" class="footer-link">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+    <section id="faq">
+      <div class="section-head">
+        <p class="section-kicker">FAQ</p>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">FAQ copy is scaffolded below so you can plug in final messaging later.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Can I try the app before I buy it?</summary>
+          <p class="faq-answer">Yes. PowerTread includes free sample courses and workouts, so you can evaluate the experience before purchasing. It is the fastest way to confirm your treadmill and connected devices are fully compatible with your setup.</p>
+        </details>
+
+        <details>
+          <summary>Do I have to simulate a course to use the app?</summary>
+          <p class="faq-answer">No. PowerTread can run in Passive mode, where it records your session data and automatically adjusts power meter readings based on the treadmill's current incline. If you control incline manually on the treadmill, a single Bluetooth connection is enough. Two Bluetooth connections are only needed when another app, such as Zwift, is controlling incline while PowerTread is connected to read incline and record data.</p>
+        </details>
+
+        <details>
+          <summary>Do I need to buy a subscription to PowerTread?</summary>
+          <p class="faq-answer">No. PowerTread Pro is a one-time, buy-once purchase that unlocks the full app for life, including future updates and new features. No subscriptions. No recurring fees. Ever.</p>
+        </details>
+
+        <details>
+          <summary>What features are free to use?</summary>
+          <p class="faq-answer">PowerTread's sample courses, sample workouts, and Passive mode are available free of charge, with no usage limits.</p>
+        </details>
+
+        <details>
+          <summary>What features require PowerTread Pro?</summary>
+          <p class="faq-answer">PowerTread Pro unlocks advanced import and sync capabilities, including adding your own GPX files to the course library, pulling courses from services like Strava, importing FIT structured workouts, and syncing planned workouts from platforms such as Intervals.icu.</p>
+        </details>
+
+        <details>
+          <summary>Can I sync my completed activities to my training platform?</summary>
+          <p class="faq-answer">Yes. Completed activities can currently be synced to Strava and Intervals.icu, and additional platform integrations are in active development.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <p>&copy; 2026 NoVa Solutions Group, LLC. All rights reserved. PowerTread is a trademark of NoVa Solutions Group, LLC.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      if (window.matchMedia('(max-width: 1220px)').matches) return;
+      var steps = Array.prototype.slice.call(document.querySelectorAll('.showcase-step'));
+      var images = Array.prototype.slice.call(document.querySelectorAll('.showcase-image'));
+      if (!steps.length || !images.length) return;
+
+      function setActive(id) {
+        steps.forEach(function (step) {
+          step.classList.toggle('active', step.getAttribute('data-step') === id);
+        });
+        images.forEach(function (img) {
+          img.classList.toggle('active', img.getAttribute('data-image') === id);
+        });
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          setActive(entry.target.getAttribute('data-step'));
+        });
+      }, {
+        root: null,
+        threshold: 0.55,
+        rootMargin: '-8% 0px -20% 0px'
+      });
+
+      steps.forEach(function (step) {
+        observer.observe(step);
+      });
+    })();
+  </script>
 </body>
 </html>
