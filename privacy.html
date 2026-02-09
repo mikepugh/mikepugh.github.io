@@ -1,152 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerTread Privacy Policy</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <!-- For Apple devices -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117; /* Dark background */
-            color: #e0e6ed; /* Light text */
-        }
-        .container {
-            max-width: 800px;
-        }
-        h1, h2, h3 {
-            color: #3b82f6; /* Blue headings */
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-top: 2rem;
-        }
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        p, ul, ol {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        ul, ol {
-            list-style-position: inside;
-            padding-left: 1.5rem;
-        }
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .btn-return {
-            background-color: #3b82f6; /* Blue for primary actions */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-            display: inline-block; /* Make it behave like a block for padding/margin */
-            margin-bottom: 2rem; /* Space below button */
-        }
-        .btn-return:hover {
-            background-color: #2563eb;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerTread Privacy Policy</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-0: #040915;
+      --bg-1: #071338;
+      --panel: rgba(22, 35, 76, 0.78);
+      --panel-soft: rgba(13, 25, 58, 0.85);
+      --stroke: rgba(108, 154, 255, 0.3);
+      --text: #eaf1ff;
+      --muted: #a8bbeb;
+      --blue: #54c6ff;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background:
+        radial-gradient(circle at 16% 8%, rgba(41, 87, 190, 0.45) 0%, rgba(41, 87, 190, 0) 38%),
+        radial-gradient(circle at 95% 2%, rgba(18, 53, 136, 0.45) 0%, rgba(18, 53, 136, 0) 35%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-0) 74%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - clamp(1rem, 3.6vw, 4rem)));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.2rem 0 1rem;
+    }
+
+    .topbar {
+      border: 1px solid rgba(109, 152, 255, 0.25);
+      border-radius: 22px;
+      padding: 0.5rem 0.75rem;
+      background: linear-gradient(90deg, rgba(14, 25, 58, 0.78) 0%, rgba(13, 25, 59, 0.45) 100%);
+      backdrop-filter: blur(8px);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .back {
+      border: 1px solid var(--stroke);
+      background: rgba(24, 39, 86, 0.75);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.48rem 0.88rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .status {
+      justify-self: end;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8fd6ff;
+      border: 1px solid rgba(84, 198, 255, 0.35);
+      background: rgba(15, 56, 96, 0.4);
+      border-radius: 999px;
+      padding: 0.46rem 0.74rem;
+      white-space: nowrap;
+    }
+
+    main { padding: 1rem 0 3rem; }
+
+    .hero {
+      border-radius: 28px;
+      border: 1px solid var(--stroke);
+      background: var(--panel);
+      padding: clamp(1rem, 2.4vw, 1.8rem);
+      margin-bottom: 1rem;
+    }
+
+    .kicker {
+      margin: 0 0 0.35rem;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 0.35rem; }
+    h2 { font-size: clamp(1.2rem, 2vw, 1.6rem); margin-bottom: 0.5rem; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    .legal-grid {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .legal-section {
+      border-radius: 22px;
+      border: 1px solid rgba(113, 148, 255, 0.25);
+      background: var(--panel-soft);
+      padding: 1.1rem;
+    }
+
+    .legal-section p {
+      margin: 0 0 0.75rem;
+      color: #d5e2ff;
+    }
+
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: #d5e2ff;
+    }
+
+    .legal-section li + li { margin-top: 0.45rem; }
+
+    .legal-section a { color: #9ddfff; }
+
+    .footer {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+
+      .status { justify-self: center; }
+    }
+  </style>
 </head>
-<body class="antialiased py-12">
-    <div class="container mx-auto px-4 bg-gray-900 p-8 rounded-xl shadow-lg">
-        <a href="index.html" class="btn-return">← Return to Site</a>
-        <h1 class="text-center mb-8">PowerTread Privacy Policy</h1>
+<body>
+  <header class="shell">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img src="latest-appicon.png" alt="PowerTread app icon">
+        <span>PowerTread</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <div class="status">Legal</div>
+    </div>
+  </header>
 
-        <p class="text-gray-400 text-sm text-center mb-8">Last Updated: February 9, 2026</p>
+  <main class="shell">
+    <section class="hero">
+      <p class="kicker">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last Updated: February 9, 2026</p>
+    </section>
 
-        <p>This Privacy Policy describes how the PowerTread mobile application (the "App"), provided by NoVa Solutions Group, LLC ("we," "us," or "our"), handles your information. Your privacy is a top priority, and we want to be transparent about how your data is managed.</p>
+    <div class="legal-grid">
+      <section class="legal-section">
+        <p>This Privacy Policy describes how the PowerTread mobile application (the "App"), provided by NoVa Solutions Group, LLC ("we," "us," or "our"), handles your information.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>1. Privacy-First Data Approach</h2>
         <p><strong>PowerTread is designed so your workout data remains on your device by default.</strong> We do not collect or store your personal workout history, GPX course library, or structured workout files on our servers.</p>
         <p>To improve reliability and product quality, we may collect limited anonymous diagnostic telemetry related to app crashes and errors. This data is used only to monitor stability, troubleshoot issues, and improve the App experience.</p>
         <p>We do not intentionally use diagnostic telemetry to identify you personally, and we do not use it for advertising or sale of personal information.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>2. Information Processed On Your Device</h2>
-        <p>The App processes various types of information *locally on your device* to provide its functionality:</p>
+        <p>The App processes multiple data types locally on your device to provide functionality:</p>
         <ul>
-            <li><strong>GPX Course Data:</strong> When you load GPX course files into the App, these files and the data contained within them (e.g., elevation profiles, coordinates) are processed locally on your device to simulate courses.</li>
-            <li><strong>Treadmill and Sensor Data:</strong> The App connects to FTMS-compatible treadmills and other Bluetooth sensors. It collects data from these sensors *on your device*, including:
-                <ul>
-                    <li>Treadmill incline/elevation changes</li>
-                    <li>Running power data (from Stryd or other running power meters)</li>
-                    <li>Speed, distance, cadence (from connected devices)</li>
-                    <li>Heart rate (if connected via a compatible sensor)</li>
-                </ul>
-            </li>
-            <li><strong>Activity Data:</strong> The App processes and stores data related to your workouts *on your device*, such as start and end times, duration, average metrics (pace, power, incline), and course progress.</li>
-            <li><strong>Device Information:</strong> The App may access information about your mobile device locally for operation (e.g., model and OS version). Certain device/app metadata may also be included in anonymous crash/error diagnostics sent to us.</li>
-            <li><strong>Diagnostic Telemetry:</strong> To improve app stability, we may receive anonymous crash and error logs (for example: app version, device model, OS version, timestamps, and error stack traces). These logs are used strictly for troubleshooting and product improvement.</li>
-            <li><strong>Location Information:</strong> While the App uses GPX data for course simulation, it does not track your real-world GPS location.</li>
+          <li><strong>GPX Course Data:</strong> GPX files and course attributes (such as elevation and coordinates) are processed locally to simulate routes.</li>
+          <li><strong>Treadmill and Sensor Data:</strong> Data from FTMS-compatible treadmills and Bluetooth sensors, including incline, running power, speed, distance, cadence, and heart rate (if connected).</li>
+          <li><strong>Activity Data:</strong> Workout session information, including times, duration, pace/power/incline metrics, and course progress.</li>
+          <li><strong>Device Information:</strong> Device model and OS version for local app operation; some app/device metadata may also appear in anonymous diagnostics sent to us.</li>
+          <li><strong>Diagnostic Telemetry:</strong> Anonymous crash/error logs (for example app version, device model, OS version, timestamps, and stack traces) used strictly for troubleshooting and performance improvement.</li>
+          <li><strong>Location Information:</strong> The App uses GPX route data for simulation, but does not track your live real-world GPS location.</li>
         </ul>
+      </section>
 
+      <section class="legal-section">
         <h2>3. How Information Is Used</h2>
-        <p>The App uses information for the following purposes:</p>
         <ul>
-            <li>To provide, operate, and maintain the App's functionalities, including GPX course simulation and treadmill control.</li>
-            <li>To display your running metrics (e.g., power, pace, incline) during workouts.</li>
-            <li>To record and summarize your workout activities within the App for your personal review.</li>
-            <li>To generate and save a .FIT file of your workout on your local device that you can analyze as needed.</li>
-            <li>To record and share your workout .FIT files with authorized 3rd party services such as Strava.</li>
-            <li>To detect, diagnose, and resolve crashes, bugs, and performance issues using anonymous diagnostic telemetry.</li>
+          <li>To provide, operate, and maintain core features, including course simulation and treadmill control.</li>
+          <li>To display live workout metrics during runs.</li>
+          <li>To record and summarize workout activity on your device for personal review.</li>
+          <li>To generate and save workout FIT files locally.</li>
+          <li>To share workout FIT files with authorized third-party services when you choose to do so.</li>
+          <li>To detect, diagnose, and resolve crashes, bugs, and performance issues using anonymous diagnostics.</li>
         </ul>
+      </section>
 
+      <section class="legal-section">
         <h2>4. Sharing Your Information</h2>
-        <p>Your personal workout data is not shared by PowerTread (NoVa Solutions Group) with third parties except through your explicit actions and authorized integrations.</p>
+        <p>Your personal workout data is not shared by NoVa Solutions Group except through actions you explicitly authorize:</p>
         <ul>
-            <li><strong>Optional Third-Party Integrations:</strong> The App may offer optional features to connect with and sync your activity data directly from your device to third-party fitness platforms (e.g., Strava). These integrations are entirely opt-in and require your explicit authorization within the App.
-                <ul>
-                    <li>When you authorize a connection, data will be shared directly between your device and the selected third-party service, subject to their respective terms of service and privacy policies.</li>
-                    <li>You are in full control of authorizing and deactivating these connections at any time within the App's settings.</li>
-                    <li>We are not responsible for the data practices of these third-party services.</li>
-                </ul>
-            </li>
-            <li><strong>Diagnostics Service Providers:</strong> We may use trusted service providers to process anonymous crash/error diagnostics on our behalf. These providers are contractually limited to supporting reliability and security of the App.</li>
+          <li><strong>Optional Third-Party Integrations:</strong> You may connect services like Strava. When authorized, data is shared directly between your device and the selected platform under that platform's terms/privacy policy.</li>
+          <li><strong>Your Control:</strong> You can authorize or revoke third-party integrations at any time from App settings.</li>
+          <li><strong>Diagnostics Service Providers:</strong> We may use trusted providers to process anonymous crash/error diagnostics on our behalf, solely for app reliability and security support.</li>
         </ul>
+      </section>
 
+      <section class="legal-section">
         <h2>5. Data Security (On Device)</h2>
-        <p>Since your data resides on your device, its security is primarily dependent on the security of your device and the operating system's protections. We design the App to handle data securely within the device's environment. We encourage you to use strong passwords and security features on your mobile device.</p>
+        <p>Because workout data is stored on your device, security depends heavily on your device protections and operating system controls. We recommend enabling device-level security features.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>6. Your Choices and Rights</h2>
-        <p>Since we do not collect or store your personal workout data on our servers, your control over workout data is primarily exercised through your device settings and the App's features. You can:</p>
+        <p>Because we do not store your personal workout data on our servers, your primary controls are in the App and your device settings:</p>
         <ul>
-            <li>Manage or delete workout data stored locally on your device within the App.</li>
-            <li>Control permissions for device features (e.g., Bluetooth) via your operating system settings.</li>
-            <li>Authorize or deactivate third-party integrations at any time within the App.</li>
-            <li>Use available in-app or platform controls for diagnostics and analytics preferences, where supported.</li>
+          <li>Manage or delete locally stored workout data in the App.</li>
+          <li>Control permissions (such as Bluetooth) through your OS settings.</li>
+          <li>Authorize or deactivate third-party integrations at any time.</li>
+          <li>Use available in-app or platform controls for diagnostics/analytics preferences, where supported.</li>
         </ul>
+      </section>
 
+      <section class="legal-section">
         <h2>7. Third-Party Links</h2>
-        <p>The App may contain links to third-party websites or services (e.g., for support documentation or compatible devices). We are not responsible for the privacy practices of these third parties. We encourage you to review the privacy policies of any third-party sites or services you visit.</p>
+        <p>The App may include links to external websites/services. We are not responsible for their privacy practices, and you should review their policies directly.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>8. Children's Privacy</h2>
-        <p>The App is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that personal information from a child under 13 has been inadvertently processed on a device, we would recommend steps for the user to delete such information from their device.</p>
+        <p>The App is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>9. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        <p>We may update this policy from time to time. Changes are effective when posted on this page with an updated "Last Updated" date.</p>
+      </section>
 
+      <section class="legal-section">
         <h2>10. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
-        <p>NoVa Solutions Group, LLC<br>
-        Email: <a href="mailto:privacy@powertread.fit">privacy@powertread.fit</a></p>
-        <a href="index.html" class="btn-return">← Return to Site</a>
+        <p>If you have questions about this Privacy Policy, contact:</p>
+        <p>NoVa Solutions Group, LLC<br>Email: <a href="mailto:privacy@powertread.fit">privacy@powertread.fit</a></p>
+      </section>
     </div>
+
+    <div class="footer">
+      <a class="back" href="index.html">Return to Site</a>
+    </div>
+  </main>
 </body>
 </html>
