@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "title": "PowerTread — Conquiste Cualquier Recorrido, en Interiores.",
+    "description": "PowerTread ofrece simulación de recorridos reales, entrenamientos estructurados, potencia ajustada por inclinación y sincronización de actividades para corredores en interiores."
+  },
+  "nav": {
+    "features": "Funciones",
+    "gallery": "Galería",
+    "compatibility": "Compatibilidad",
+    "faq": "Preguntas frecuentes",
+    "home": "Inicio",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "status": "Próximamente en la App Store",
+  "hero": {
+    "eyebrow": "Entrenamiento en Interiores, Reinventado",
+    "title": "Conquiste Cualquier Recorrido, en Interiores.",
+    "subtitle": "Convierta cada carrera en interiores en un entrenamiento con propósito mediante simulación de recorridos reales, guía inteligente de ejercicios y datos de potencia confiables.",
+    "chips": [
+      "Control de Cinta FTMS",
+      "Entrenamientos Estructurados",
+      "Compatibilidad con Stryd",
+      "Sincronización de Actividades"
+    ],
+    "primaryCta": "Ver Funciones Principales",
+    "secondaryCta": "Ver la Experiencia de la App"
+  },
+  "features": {
+    "kicker": "Funciones Principales",
+    "title": "Entrene como el día de la carrera, incluso en interiores",
+    "subtitle": "PowerTread combina simulación realista de terreno, entrenamientos estructurados y sincronización fluida de actividades en una plataforma de running enfocada.",
+    "items": [
+      {
+        "tag": "Simulación",
+        "tagColor": "blue",
+        "title": "Simulación de Recorridos Reales",
+        "description": "Cargue rutas exteriores y sienta cada subida y descenso en cintas compatibles con FTMS, para que sus sesiones en cinta se ajusten a las exigencias de recorridos reales."
+      },
+      {
+        "tag": "Stryd",
+        "tagColor": "green",
+        "title": "Potencia Ajustada por Inclinación Automática",
+        "description": "Obtenga datos de potencia Stryd más significativos con ajustes automáticos según la inclinación que reflejan mejor el esfuerzo real de carrera."
+      },
+      {
+        "tag": "Entrenamientos",
+        "tagColor": "orange",
+        "title": "Soporte de Entrenamientos Estructurados",
+        "description": "Ejecute intervalos planificados y bloques de entrenamiento mientras la simulación de recorrido continúa, combinando ejecución precisa con realismo de terreno."
+      },
+      {
+        "tag": "Sincronización",
+        "tagColor": "blue",
+        "title": "Envío de Actividades a Plataformas Conectadas",
+        "description": "Envíe sus carreras completadas a servicios como Strava e Intervals.icu, para que su trabajo en interiores permanezca conectado a su historial de entrenamiento completo."
+      }
+    ]
+  },
+  "showcase": {
+    "steps": [
+      {
+        "kicker": "Biblioteca",
+        "title": "Construya una biblioteca de rutas en torno a sus objetivos reales",
+        "description": "Organice sus recorridos clave en un solo lugar para que su próxima sesión en cinta siempre esté vinculada a la preparación de carreras, no a kilómetros al azar.",
+        "image": "screenshots/personal-course-library.png",
+        "imageAlt": "Biblioteca de recorridos de PowerTread con rutas guardadas y destacadas",
+        "caption": "Guarde sus rutas favoritas y construya una biblioteca de recorridos enfocada en carreras."
+      },
+      {
+        "kicker": "Planificación",
+        "title": "Reúna sus entrenamientos planificados en una vista clara",
+        "description": "Elija la sesión del día rápidamente y pase de la planificación a la ejecución sin alternar entre múltiples aplicaciones.",
+        "image": "screenshots/view-todays-planned-workouts.png",
+        "imageAlt": "Biblioteca de entrenamientos de PowerTread con sesiones planificadas",
+        "caption": "Importe sesiones planificadas y comience el entrenamiento correcto en segundos."
+      },
+      {
+        "kicker": "Ejecución",
+        "title": "Sienta un terreno realista con control automático de inclinación",
+        "description": "PowerTread traduce la elevación del recorrido en cambios de inclinación FTMS para que el ritmo y el esfuerzo reflejen naturalmente la carrera al aire libre.",
+        "image": "screenshots/course-simulation.png",
+        "imageAlt": "Simulación de recorrido en vivo de PowerTread con métricas y gráfico de perfil",
+        "caption": "Vea el ritmo, la potencia, la inclinación y el perfil del recorrido actualizarse en tiempo real."
+      },
+      {
+        "kicker": "Modo de Entrenamiento",
+        "title": "Combine intervalos precisos con el contexto de un recorrido real",
+        "description": "Alcance sus objetivos de entrenamiento mientras la simulación de ruta continúa, ofreciendo estructura y especificidad en una sola sesión enfocada.",
+        "image": "screenshots/structured-workouts-main.png",
+        "imageAlt": "Ejecución de entrenamiento estructurado en PowerTread mientras corre",
+        "caption": "Manténgase enfocado en el objetivo con intervalos guiados durante toda la carrera."
+      }
+    ]
+  },
+  "compatibility": {
+    "kicker": "Compatibilidad",
+    "title": "Diseñado para configuraciones reales de cintas y sensores",
+    "subtitle": "PowerTread está diseñado para hardware de cintas FTMS modernas y sensores de potencia de carrera confiables, con compatibilidad más amplia en continua expansión.",
+    "treadmills": {
+      "title": "Cintas de Correr",
+      "items": [
+        "Wahoo KICKR RUN",
+        "Sole F63",
+        "Titan Life T73",
+        "Sportstech F37f",
+        "Otras cintas compatibles con FTMS"
+      ]
+    },
+    "powerMeters": {
+      "title": "Medidores de Potencia",
+      "items": [
+        "Medidores de potencia de carrera Stryd"
+      ]
+    }
+  },
+  "safety": {
+    "kicker": "Seguridad y Responsabilidad",
+    "title": "Entrene de forma inteligente y mantenga el control",
+    "notice": "<strong>Importante:</strong> Mantenga siempre el control de su cinta de correr y esté preparado para detener su equipo de inmediato en cualquier momento. Utilice PowerTread únicamente cuando pueda supervisar de forma segura su entorno, el comportamiento de la cinta y los dispositivos conectados durante todo su entrenamiento."
+  },
+  "faq": {
+    "kicker": "Preguntas frecuentes",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas a preguntas comunes sobre precios, compatibilidad y cómo PowerTread se integra en su flujo de entrenamiento.",
+    "items": [
+      {
+        "question": "¿Puedo probar la aplicación antes de comprarla?",
+        "answer": "Sí. PowerTread incluye recorridos y entrenamientos de muestra gratuitos, para que pueda evaluar la experiencia antes de realizar la compra. Es la forma más rápida de confirmar que su cinta de correr y dispositivos conectados son totalmente compatibles con su configuración."
+      },
+      {
+        "question": "¿Tengo que simular un recorrido para usar la aplicación?",
+        "answer": "No. PowerTread puede funcionar en modo Pasivo, donde registra los datos de su sesión y ajusta automáticamente las lecturas del medidor de potencia según la inclinación actual de la cinta. Si controla la inclinación manualmente en la cinta, una sola conexión Bluetooth es suficiente. Solo se necesitan dos conexiones Bluetooth cuando otra aplicación, como Zwift, controla la inclinación mientras PowerTread está conectado para leer la inclinación y registrar datos."
+      },
+      {
+        "question": "¿Necesito comprar una suscripción a PowerTread?",
+        "answer": "No. PowerTread Pro es una compra única que desbloquea la aplicación completa de por vida, incluyendo futuras actualizaciones y nuevas funciones. Sin suscripciones. Sin cargos recurrentes. Nunca."
+      },
+      {
+        "question": "¿Qué funciones son de uso gratuito?",
+        "answer": "Los recorridos de muestra, los entrenamientos de muestra y el modo Pasivo de PowerTread están disponibles de forma gratuita, sin límites de uso."
+      },
+      {
+        "question": "¿Qué funciones requieren PowerTread Pro?",
+        "answer": "PowerTread Pro desbloquea capacidades avanzadas de importación y sincronización, incluyendo agregar sus propios archivos GPX a la biblioteca de recorridos, obtener recorridos de servicios como Strava, importar entrenamientos estructurados FIT y sincronizar entrenamientos planificados desde plataformas como Intervals.icu."
+      },
+      {
+        "question": "¿Puedo sincronizar mis actividades completadas con mi plataforma de entrenamiento?",
+        "answer": "Sí. Las actividades completadas actualmente se pueden sincronizar con Strava e Intervals.icu, y se están desarrollando activamente integraciones con plataformas adicionales."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 NoVa Solutions Group, LLC. Todos los derechos reservados. PowerTread es una marca registrada de NoVa Solutions Group, LLC."
+  },
+  "common": {
+    "returnToSite": "Volver al Sitio",
+    "legal": "Legal"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Last Updated: February 9, 2026",
+    "intro": "Esta Política de Privacidad describe cómo la aplicación móvil PowerTread (la \"Aplicación\"), proporcionada por NoVa Solutions Group, LLC (\"nosotros\" o \"nuestro/a\"), maneja su información.",
+    "sections": [
+      {
+        "title": "1. Enfoque de Datos con Privacidad Primero",
+        "content": [
+          "<strong>PowerTread está diseñado para que sus datos de entrenamiento permanezcan en su dispositivo de forma predeterminada.</strong> No recopilamos ni almacenamos su historial personal de entrenamientos, biblioteca de recorridos GPX ni archivos de entrenamientos estructurados en nuestros servidores.",
+          "Para mejorar la fiabilidad y la calidad del producto, podemos recopilar telemetría diagnóstica anónima limitada relacionada con fallos y errores de la aplicación. Estos datos se utilizan únicamente para monitorizar la estabilidad, solucionar problemas y mejorar la experiencia de la Aplicación.",
+          "No utilizamos intencionalmente la telemetría diagnóstica para identificarle personalmente, y no la utilizamos con fines publicitarios ni para la venta de información personal."
+        ]
+      },
+      {
+        "title": "2. Información Procesada en Su Dispositivo",
+        "content": [
+          "La Aplicación procesa múltiples tipos de datos localmente en su dispositivo para proporcionar funcionalidad:"
+        ],
+        "list": [
+          "<strong>Datos de Recorridos GPX:</strong> Los archivos GPX y los atributos de recorrido (como elevación y coordenadas) se procesan localmente para simular rutas.",
+          "<strong>Datos de Cinta y Sensores:</strong> Datos de cintas compatibles con FTMS y sensores Bluetooth, incluyendo inclinación, potencia de carrera, velocidad, distancia, cadencia y frecuencia cardíaca (si está conectado).",
+          "<strong>Datos de Actividad:</strong> Información de sesiones de entrenamiento, incluyendo tiempos, duración, métricas de ritmo/potencia/inclinación y progreso del recorrido.",
+          "<strong>Información del Dispositivo:</strong> Modelo del dispositivo y versión del sistema operativo para el funcionamiento local de la aplicación; algunos metadatos de la aplicación/dispositivo también pueden aparecer en los diagnósticos anónimos enviados a nosotros.",
+          "<strong>Telemetría Diagnóstica:</strong> Registros anónimos de fallos/errores (por ejemplo, versión de la aplicación, modelo del dispositivo, versión del sistema operativo, marcas de tiempo y trazas de pila) utilizados estrictamente para la solución de problemas y la mejora del rendimiento.",
+          "<strong>Información de Ubicación:</strong> La Aplicación utiliza datos de rutas GPX para la simulación, pero no rastrea su ubicación GPS real en tiempo real."
+        ]
+      },
+      {
+        "title": "3. Cómo Se Utiliza la Información",
+        "list": [
+          "Para proporcionar, operar y mantener las funciones principales, incluyendo la simulación de recorridos y el control de la cinta.",
+          "Para mostrar métricas de entrenamiento en vivo durante las carreras.",
+          "Para registrar y resumir la actividad de entrenamiento en su dispositivo para revisión personal.",
+          "Para generar y guardar archivos FIT de entrenamiento localmente.",
+          "Para compartir archivos FIT de entrenamiento con servicios de terceros autorizados cuando usted decida hacerlo.",
+          "Para detectar, diagnosticar y resolver fallos, errores y problemas de rendimiento mediante diagnósticos anónimos."
+        ]
+      },
+      {
+        "title": "4. Compartición de Su Información",
+        "content": [
+          "Sus datos personales de entrenamiento no son compartidos por NoVa Solutions Group excepto mediante acciones que usted autorice expresamente:"
+        ],
+        "list": [
+          "<strong>Integraciones Opcionales con Terceros:</strong> Puede conectar servicios como Strava. Cuando se autoriza, los datos se comparten directamente entre su dispositivo y la plataforma seleccionada bajo los términos y la política de privacidad de dicha plataforma.",
+          "<strong>Su Control:</strong> Puede autorizar o revocar integraciones con terceros en cualquier momento desde la configuración de la Aplicación.",
+          "<strong>Proveedores de Servicios de Diagnóstico:</strong> Podemos utilizar proveedores de confianza para procesar diagnósticos anónimos de fallos/errores en nuestro nombre, únicamente para el soporte de fiabilidad y seguridad de la aplicación."
+        ]
+      },
+      {
+        "title": "5. Seguridad de los Datos (En el Dispositivo)",
+        "content": [
+          "Debido a que los datos de entrenamiento se almacenan en su dispositivo, la seguridad depende en gran medida de las protecciones de su dispositivo y los controles del sistema operativo. Le recomendamos habilitar las funciones de seguridad a nivel de dispositivo."
+        ]
+      },
+      {
+        "title": "6. Sus Opciones y Derechos",
+        "content": [
+          "Dado que no almacenamos sus datos personales de entrenamiento en nuestros servidores, sus controles principales se encuentran en la Aplicación y en la configuración de su dispositivo:"
+        ],
+        "list": [
+          "Gestionar o eliminar datos de entrenamiento almacenados localmente en la Aplicación.",
+          "Controlar permisos (como Bluetooth) a través de la configuración del sistema operativo.",
+          "Autorizar o desactivar integraciones con terceros en cualquier momento.",
+          "Utilizar los controles disponibles en la aplicación o en la plataforma para las preferencias de diagnóstico/análisis, cuando estén disponibles."
+        ]
+      },
+      {
+        "title": "7. Enlaces de Terceros",
+        "content": [
+          "La Aplicación puede incluir enlaces a sitios web/servicios externos. No somos responsables de sus prácticas de privacidad, y usted debe revisar sus políticas directamente."
+        ]
+      },
+      {
+        "title": "8. Privacidad de los Menores",
+        "content": [
+          "La Aplicación no está destinada a menores de 13 años. No recopilamos intencionalmente información personal de menores de 13 años."
+        ]
+      },
+      {
+        "title": "9. Cambios a Esta Política de Privacidad",
+        "content": [
+          "Podemos actualizar esta política de vez en cuando. Los cambios entran en vigor cuando se publican en esta página con una fecha de \"Última Actualización\" actualizada."
+        ]
+      },
+      {
+        "title": "10. Contáctenos",
+        "content": [
+          "Si tiene preguntas sobre esta Política de Privacidad, contacte a:",
+          "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:privacy@powertread.fit\">privacy@powertread.fit</a>"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Last Updated: February 9, 2026",
+    "intro": "Bienvenido a PowerTread. Estos Términos de Servicio (\"Términos\") rigen el uso de la aplicación móvil PowerTread (la \"Aplicación\"), proporcionada por NoVa Solutions Group, LLC (\"nosotros\" o \"nuestro/a\"). Al descargar, instalar o utilizar la Aplicación, usted acepta quedar vinculado por estos Términos.",
+    "sections": [
+      {
+        "title": "1. Sin Necesidad de Cuenta y Manejo de Datos",
+        "content": [
+          "La Aplicación PowerTread está diseñada para su uso inmediato sin cuentas de usuario. No requerimos que cree una cuenta para utilizar la funcionalidad principal.",
+          "<strong>Sus datos de entrenamiento, archivos de recorridos GPX y datos personales de acondicionamiento físico generados o cargados dentro de la Aplicación permanecen en su dispositivo.</strong> No recopilamos, transmitimos, almacenamos ni tenemos acceso a sus actividades personales de entrenamiento en nuestros servidores.",
+          "Para más detalles, consulte nuestra <a href=\"#/privacy\">Política de Privacidad</a>."
+        ]
+      },
+      {
+        "title": "2. Integraciones con Terceros",
+        "content": [
+          "La Aplicación puede ofrecer funciones opcionales para conectar y sincronizar datos de actividad con plataformas de acondicionamiento físico de terceros (como Strava). Estas integraciones son opcionales y requieren su autorización."
+        ],
+        "list": [
+          "Puede autorizar y desactivar estas integraciones en cualquier momento dentro de la configuración de la Aplicación.",
+          "Cuando se autoriza, los datos se comparten directamente entre su dispositivo y el servicio seleccionado, sujeto a los términos y la política de privacidad de dicho servicio.",
+          "No somos responsables de las prácticas de datos de terceros."
+        ]
+      },
+      {
+        "title": "3. Uso de la Aplicación y Descargo de Responsabilidad de Salud",
+        "content": [
+          "La Aplicación es una herramienta diseñada para mejorar el entrenamiento en cinta de correr. Usted reconoce y acepta que:"
+        ],
+        "list": [
+          "<strong>El Uso de la Aplicación Es Bajo Su Propio Riesgo:</strong> El ejercicio, especialmente la actividad intensa, conlleva riesgos inherentes. Usted es responsable de ejercitarse de forma segura y de su condición física.",
+          "<strong>Consulte a Su Médico:</strong> Antes de comenzar cualquier programa de ejercicio, incluyendo el uso de esta Aplicación, consulte a su médico u otro profesional de la salud calificado.",
+          "<strong>Compatibilidad de Dispositivos:</strong> Usted es responsable de asegurar que su cinta de correr y sensores (incluyendo medidores de potencia Stryd) sean compatibles y funcionen correctamente.",
+          "<strong>Debe Mantener el Control:</strong> Debe mantener el control de su cinta de correr en todo momento y estar preparado para detener el equipo de inmediato si es necesario.",
+          "<strong>Conciencia del Entorno:</strong> Utilice la Aplicación únicamente cuando pueda supervisar de forma segura el comportamiento de la cinta, los dispositivos conectados y su entorno durante todo el entrenamiento.",
+          "<strong>Precauciones de Seguridad:</strong> Siga siempre todas las directrices de seguridad, advertencias e instrucciones del fabricante de su cinta de correr."
+        ]
+      },
+      {
+        "title": "4. Propiedad Intelectual",
+        "content": [
+          "Todo el contenido, las funciones y la funcionalidad de la Aplicación son propiedad de NoVa Solutions Group, LLC, sus licenciantes u otros proveedores, y están protegidos por las leyes de propiedad intelectual aplicables.",
+          "El nombre PowerTread, el logotipo y las marcas relacionadas son marcas comerciales de NoVa Solutions Group, LLC o sus afiliados/licenciantes y no pueden utilizarse sin autorización previa por escrito."
+        ]
+      },
+      {
+        "title": "5. Renuncia de Garantías",
+        "content": [
+          "LA APLICACIÓN SE PROPORCIONA \"TAL CUAL\" Y \"SEGÚN DISPONIBILIDAD\", SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS, INCLUYENDO GARANTÍAS DE COMERCIABILIDAD, NO INFRACCIÓN O IDONEIDAD PARA UN PROPÓSITO PARTICULAR.",
+          "NO GARANTIZAMOS QUE LA APLICACIÓN SERÁ ININTERRUMPIDA, LIBRE DE ERRORES O LIBRE DE COMPONENTES DAÑINOS, NI QUE LOS DEFECTOS SERÁN CORREGIDOS. NO GARANTIZAMOS LA EXACTITUD NI LA FIABILIDAD DE LOS RESULTADOS OBTENIDOS DEL USO DE LA APLICACIÓN."
+        ]
+      },
+      {
+        "title": "6. Limitación de Responsabilidad",
+        "content": [
+          "EN NINGÚN CASO NOVA SOLUTIONS GROUP, LLC, SUS AFILIADOS, NI SUS LICENCIANTES, PROVEEDORES DE SERVICIOS, EMPLEADOS, AGENTES, FUNCIONARIOS O DIRECTORES SERÁN RESPONSABLES POR DAÑOS DE CUALQUIER TIPO QUE SURJAN DE O EN CONEXIÓN CON EL USO O LA IMPOSIBILIDAD DE USO DE LA APLICACIÓN, INCLUYENDO DAÑOS DIRECTOS, INDIRECTOS, INCIDENTALES, CONSECUENCIALES, ESPECIALES O PUNITIVOS, INCLUSO SI FUERAN PREVISIBLES."
+        ]
+      },
+      {
+        "title": "7. Cambios a Estos Términos",
+        "content": [
+          "Podemos revisar estos Términos a nuestra discreción. Los cambios entran en vigor cuando se publican y se aplican a todo uso de la Aplicación a partir de ese momento. El uso continuado después de las actualizaciones significa que usted acepta los Términos revisados."
+        ]
+      },
+      {
+        "title": "8. Ley Aplicable y Jurisdicción",
+        "content": [
+          "Estos Términos y cualquier disputa relacionada con la Aplicación se rigen por las leyes del Estado Libre Asociado de Virginia (Commonwealth of Virginia), sin consideración a los principios de conflicto de leyes."
+        ]
+      },
+      {
+        "title": "9. Información de Contacto",
+        "content": [
+          "Si tiene preguntas sobre estos Términos, contacte a:",
+          "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:support@powertread.fit\">support@powertread.fit</a>"
+        ]
+      }
+    ]
+  }
+}
