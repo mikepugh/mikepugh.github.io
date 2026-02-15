@@ -391,7 +391,7 @@ section { margin-top: 3.3rem; }
   font-size: 0.9rem;
 }
 
-/* ── Showcase Band (Desktop scroll-driven) ── */
+/* ── Showcase — Horizontal scroll-on-vertical-scroll gallery ── */
 .showcase-band {
   position: relative;
   left: 50%;
@@ -399,7 +399,8 @@ section { margin-top: 3.3rem; }
   margin-left: -50vw;
   margin-right: -50vw;
   width: 100vw;
-  padding: 2.4rem clamp(1rem, 3.2vw, 4rem);
+  /* JS sets --showcase-panels; height = panels * 100vh for scroll range */
+  height: calc(var(--showcase-panels, 4) * 100vh);
   background:
     radial-gradient(circle at 90% 40%, rgba(33, 92, 201, 0.24) 0%, rgba(33, 92, 201, 0) 42%),
     linear-gradient(180deg, rgba(8, 16, 40, 0.45) 0%, rgba(6, 13, 33, 0.95) 100%);
@@ -407,143 +408,111 @@ section { margin-top: 3.3rem; }
   border-bottom: 1px solid rgba(113, 148, 255, 0.22);
 }
 
-.showcase-wrap {
-  width: min(var(--max), 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
-  gap: 1.1rem;
-  align-items: start;
-}
-
-.showcase-media {
+.showcase-sticky {
   position: sticky;
-  top: 1.2rem;
-  min-height: min(74vh, 760px);
-  border-radius: 28px;
-  border: 1px solid rgba(115, 151, 255, 0.26);
-  background: rgba(14, 25, 56, 0.76);
-  padding: 0.95rem;
+  top: 0;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.showcase-image {
-  position: absolute;
-  inset: 0.95rem;
-  margin: 0;
-  opacity: 0;
-  transform: scale(0.985);
-  transition: opacity 320ms ease, transform 420ms ease;
-  pointer-events: none;
+.showcase-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  transition: transform 80ms ease-out;
+}
+
+.showcase-panel {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 0.55rem;
+  padding: clamp(1rem, 3vw, 3rem);
 }
 
-.showcase-image.active {
-  opacity: 1;
-  transform: scale(1);
+.showcase-panel-inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
 }
 
-.showcase-image img {
+.showcase-panel-media {
+  border-radius: 24px;
+  border: 1px solid rgba(115, 151, 255, 0.26);
+  background: rgba(14, 25, 56, 0.76);
+  padding: clamp(0.6rem, 1.2vw, 1rem);
+  overflow: hidden;
+}
+
+.showcase-panel-media img {
   width: 100%;
   height: auto;
-  border-radius: 18px;
+  border-radius: 16px;
   object-fit: contain;
   display: block;
   box-shadow: 0 20px 40px rgba(2, 8, 22, 0.5);
 }
 
-.showcase-image figcaption {
-  color: #bfd0f8;
-  font-size: 0.86rem;
-  margin-top: 0.15rem;
-}
-
-.showcase-steps {
-  display: grid;
-  gap: 1rem;
-}
-
-.showcase-step {
-  border-radius: 22px;
-  border: 1px solid rgba(113, 148, 255, 0.24);
-  background: rgba(16, 29, 66, 0.78);
-  padding: 1.15rem;
-  min-height: min(62vh, 460px);
+.showcase-panel-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: border-color 240ms ease, background 240ms ease;
+  gap: 0.5rem;
 }
 
-.showcase-step.active {
-  border-color: rgba(84, 198, 255, 0.7);
-  background: rgba(15, 32, 74, 0.95);
+.showcase-panel-content .section-kicker {
+  margin: 0;
 }
 
-.showcase-step h3 {
-  font-size: clamp(1.15rem, 1.7vw, 1.7rem);
-  margin-bottom: 0.45rem;
+.showcase-panel-content h3 {
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  line-height: 1.1;
 }
 
-.showcase-step p {
+.showcase-panel-content p {
   margin: 0;
   color: var(--muted);
-  max-width: 44ch;
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  max-width: 42ch;
+  line-height: 1.55;
 }
 
-/* ── Showcase Carousel (Mobile) ── */
-.showcase-carousel {
-  display: none;
-  width: min(var(--max), 100%);
-  margin: 0 auto;
+.showcase-panel-content figcaption {
+  color: #8fa8d8;
+  font-size: 0.84rem;
+  font-style: italic;
+  margin-top: 0.25rem;
 }
 
-.carousel-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: min(86vw, 560px);
-  gap: 1rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 0.2rem 0.2rem 0.8rem;
-  -webkit-overflow-scrolling: touch;
+/* Progress dots */
+.showcase-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.carousel-track::-webkit-scrollbar        { height: 9px; }
-.carousel-track::-webkit-scrollbar-thumb   { background: rgba(112, 153, 255, 0.45); border-radius: 999px; }
-.carousel-track::-webkit-scrollbar-track   { background: rgba(9, 17, 40, 0.7); border-radius: 999px; }
-
-.carousel-slide {
-  scroll-snap-align: start;
-  border-radius: 24px;
-  border: 1px solid var(--stroke-dim);
-  background: var(--panel-soft);
-  padding: 0.9rem;
+.showcase-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(108, 154, 255, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 200ms ease, transform 200ms ease;
 }
 
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  object-fit: contain;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 18px 36px rgba(2, 8, 22, 0.45);
-}
-
-.carousel-slide h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.35rem;
-}
-
-.carousel-slide p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
+.showcase-dot.active {
+  background: var(--blue);
+  transform: scale(1.3);
 }
 
 /* ── Compatibility Grid ── */
@@ -711,14 +680,6 @@ summary::-webkit-details-marker { display: none; }
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .showcase-wrap {
-    display: none;
-  }
-
-  .showcase-carousel {
-    display: block;
-  }
 }
 
 @media (max-width: 920px) {
@@ -743,9 +704,21 @@ summary::-webkit-details-marker { display: none; }
   .feature-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .showcase-band {
-    padding: 1.5rem 0.9rem;
+@media (max-width: 768px) {
+  .showcase-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .showcase-panel-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .showcase-panel-content p {
+    max-width: none;
   }
 }
 

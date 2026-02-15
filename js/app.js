@@ -7,7 +7,7 @@
   'use strict';
 
   var i18n = window.PTi18n;
-  var showcaseObserver = null;
+  var showcaseScrollHandler = null;
 
   /* ════════════════════════════════════════════════
      Routing
@@ -95,32 +95,27 @@
         '</article>';
     }
 
-    var showcaseImages = '', showcaseSteps = '', carouselSlides = '';
-    for (var j = 0; j < s.showcase.steps.length; j++) {
+    /* Showcase — horizontal panels */
+    var numPanels = s.showcase.steps.length;
+    var panels = '';
+    var dots = '';
+    for (var j = 0; j < numPanels; j++) {
       var step = s.showcase.steps[j];
-      var idx = j + 1;
-      var isFirst = j === 0;
-
-      showcaseImages +=
-        '<figure class="showcase-image' + (isFirst ? ' active' : '') + '" data-image="' + idx + '">' +
-          '<img src="' + step.image + '" alt="' + step.imageAlt + '">' +
-          '<figcaption>' + step.caption + '</figcaption>' +
-        '</figure>';
-
-      showcaseSteps +=
-        '<article class="showcase-step' + (isFirst ? ' active' : '') + '" data-step="' + idx + '">' +
-          '<p class="section-kicker">' + step.kicker + '</p>' +
-          '<h3>' + step.title + '</h3>' +
-          '<p>' + step.description + '</p>' +
-        '</article>';
-
-      carouselSlides +=
-        '<article class="carousel-slide">' +
-          '<img src="' + step.image + '" alt="' + step.imageAlt + '">' +
-          '<p class="section-kicker">' + step.kicker + '</p>' +
-          '<h3>' + step.title + '</h3>' +
-          '<p>' + step.description + '</p>' +
-        '</article>';
+      panels +=
+        '<div class="showcase-panel">' +
+          '<div class="showcase-panel-inner">' +
+            '<div class="showcase-panel-media">' +
+              '<img src="' + step.image + '" alt="' + step.imageAlt + '">' +
+            '</div>' +
+            '<div class="showcase-panel-content">' +
+              '<p class="section-kicker">' + step.kicker + '</p>' +
+              '<h3>' + step.title + '</h3>' +
+              '<p>' + step.description + '</p>' +
+              '<figcaption>' + step.caption + '</figcaption>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      dots += '<button class="showcase-dot' + (j === 0 ? ' active' : '') + '" data-panel="' + j + '" aria-label="Panel ' + (j + 1) + '"></button>';
     }
 
     var compatTreadmills = '', compatPower = '';
@@ -171,17 +166,16 @@
           '</div>' +
           '<div class="feature-grid">' + features + '</div>' +
         '</section>' +
+      '</main>' +
 
-        '<section id="showcase" class="showcase-band">' +
-          '<div class="showcase-wrap">' +
-            '<div class="showcase-media" aria-live="polite">' + showcaseImages + '</div>' +
-            '<div class="showcase-steps">' + showcaseSteps + '</div>' +
-          '</div>' +
-          '<div class="showcase-carousel" aria-label="PowerTread feature gallery">' +
-            '<div class="carousel-track">' + carouselSlides + '</div>' +
-          '</div>' +
-        '</section>' +
+      '<section id="showcase" class="showcase-band" style="--showcase-panels:' + numPanels + '">' +
+        '<div class="showcase-sticky">' +
+          '<div class="showcase-track">' + panels + '</div>' +
+          '<div class="showcase-dots">' + dots + '</div>' +
+        '</div>' +
+      '</section>' +
 
+      '<main class="shell">' +
         '<section id="compatibility">' +
           '<div class="section-head">' +
             '<p class="section-kicker">' + s.compatibility.kicker + '</p>' +
@@ -311,14 +305,10 @@
     window.scrollTo(0, 0);
     bindScrollButtons();
     bindLangSwitcher();
-
-    if (showcaseObserver) {
-      showcaseObserver.disconnect();
-      showcaseObserver = null;
-    }
+    teardownShowcase();
 
     if (route === 'home') {
-      initShowcaseObserver();
+      initShowcaseScroll();
     }
   }
 
@@ -362,36 +352,56 @@
     });
   }
 
-  function initShowcaseObserver() {
-    if (window.matchMedia('(max-width: 1220px)').matches) return;
+  /* ════════════════════════════════════════════════
+     Showcase — Horizontal scroll on vertical scroll
+     ════════════════════════════════════════════════ */
 
-    var steps = document.querySelectorAll('.showcase-step');
-    var images = document.querySelectorAll('.showcase-image');
-    if (!steps.length || !images.length) return;
+  function teardownShowcase() {
+    if (showcaseScrollHandler) {
+      window.removeEventListener('scroll', showcaseScrollHandler);
+      showcaseScrollHandler = null;
+    }
+  }
 
-    function setActive(id) {
-      for (var i = 0; i < steps.length; i++) {
-        steps[i].classList.toggle('active', steps[i].dataset.step === id);
-      }
-      for (var j = 0; j < images.length; j++) {
-        images[j].classList.toggle('active', images[j].dataset.image === id);
+  function initShowcaseScroll() {
+    var band = document.querySelector('.showcase-band');
+    var track = document.querySelector('.showcase-track');
+    var dots = document.querySelectorAll('.showcase-dot');
+    if (!band || !track) return;
+
+    var numPanels = track.children.length;
+    if (numPanels < 2) return;
+
+    var lastActivePanel = 0;
+
+    function onScroll() {
+      var rect = band.getBoundingClientRect();
+      var scrollRange = band.offsetHeight - window.innerHeight;
+      if (scrollRange <= 0) return;
+
+      // progress: 0 (just entered) → 1 (about to leave)
+      var progress = Math.max(0, Math.min(1, -rect.top / scrollRange));
+
+      // Map progress to horizontal translation
+      var maxShift = (numPanels - 1) * window.innerWidth;
+      var shift = progress * maxShift;
+      track.style.transform = 'translateX(' + (-shift) + 'px)';
+
+      // Update dots
+      var activePanel = Math.round(progress * (numPanels - 1));
+      if (activePanel !== lastActivePanel) {
+        for (var d = 0; d < dots.length; d++) {
+          dots[d].classList.toggle('active', d === activePanel);
+        }
+        lastActivePanel = activePanel;
       }
     }
 
-    showcaseObserver = new IntersectionObserver(function (entries) {
-      for (var i = 0; i < entries.length; i++) {
-        if (!entries[i].isIntersecting) continue;
-        setActive(entries[i].target.dataset.step);
-      }
-    }, {
-      root: null,
-      threshold: 0.55,
-      rootMargin: '-8% 0px -20% 0px'
-    });
+    showcaseScrollHandler = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    for (var k = 0; k < steps.length; k++) {
-      showcaseObserver.observe(steps[k]);
-    }
+    // Run once immediately in case already scrolled
+    onScroll();
   }
 
   /* ════════════════════════════════════════════════
