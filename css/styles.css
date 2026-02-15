@@ -757,8 +757,8 @@ summary::-webkit-details-marker { display: none; }
     display: none;
     grid-column: 1 / -1;
     flex-direction: column;
-    align-items: center;
-    gap: 0.65rem;
+    align-items: stretch;
+    gap: 0.45rem;
     padding: 0.4rem 0 0.2rem;
   }
 
@@ -767,7 +767,27 @@ summary::-webkit-details-marker { display: none; }
   }
 
   .site-nav {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .site-nav .nav-link {
+    width: 100%;
     justify-content: center;
+  }
+
+  .mobile-menu .lang-switcher {
+    width: 100%;
+  }
+
+  .mobile-menu .lang-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mobile-menu .status-badge {
+    width: 100%;
+    text-align: center;
   }
 
   .status-badge { justify-self: center; }
