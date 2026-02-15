@@ -118,7 +118,7 @@
   "safety": {
     "kicker": "Safety & Responsibility",
     "title": "Train smart and stay in control",
-    "notice": "<strong>Important:</strong> Always remain in control of your treadmill and be prepared to stop your equipment immediately at any time. Use PowerTread only when you can safely monitor your surroundings, treadmill behavior, and connected devices throughout your workout."
+    "notice": "<strong>Important:</strong> You are solely responsible for the safe operation of your treadmill at all times. Automatic incline adjustments may occur during course simulation. Always remain prepared to stop your equipment immediately and follow all treadmill manufacturer safety instructions. In the event of any discrepancy, the treadmill manufacturer’s safety guidance takes precedence over PowerTread functionality."
   },
   "faq": {
     "kicker": "FAQ",
