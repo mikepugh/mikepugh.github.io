@@ -254,7 +254,7 @@
   },
   "terms": {
     "title": "Conditions d'utilisation",
-    "lastUpdated": "Last Updated: February 9, 2026",
+    "lastUpdated": "Last Updated: February 15, 2026",
     "intro": "Bienvenue sur PowerTread. Les présentes Conditions d'utilisation (« Conditions ») régissent votre utilisation de l'application mobile PowerTread (l'« Application »), fournie par NoVa Solutions Group, LLC (« nous », « notre » ou « nos »). En téléchargeant, installant ou utilisant l'Application, vous acceptez d'être lié par les présentes Conditions.",
     "sections": [
       {
@@ -298,32 +298,41 @@
         ]
       },
       {
-        "title": "5. Exclusion de garanties",
+        "title": "5. Aucune garantie",
         "content": [
-          "L'APPLICATION EST FOURNIE « EN L'ÉTAT » ET « SELON LA DISPONIBILITÉ », SANS GARANTIE D'AUCUNE SORTE, EXPRESSE OU IMPLICITE, Y COMPRIS LES GARANTIES DE QUALITÉ MARCHANDE, D'ABSENCE DE CONTREFAÇON OU D'ADÉQUATION À UN USAGE PARTICULIER.",
-          "NOUS NE GARANTISSONS PAS QUE L'APPLICATION FONCTIONNERA DE MANIÈRE ININTERROMPUE, SANS ERREUR OU EXEMPTE DE COMPOSANTS NUISIBLES, NI QUE LES DÉFAUTS SERONT CORRIGÉS. NOUS NE GARANTISSONS PAS L'EXACTITUDE NI LA FIABILITÉ DES RÉSULTATS OBTENUS PAR L'UTILISATION DE L'APPLICATION."
+          "PowerTread est fournie « en l'état » sans garantie d'aucune sorte, expresse ou implicite. Nous ne donnons aucune garantie concernant les performances du tapis de course, la connectivité Bluetooth, le comportement de l'équipement ou le fonctionnement ininterrompu lorsque l'application est connectée.",
+          "DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI, L'APPLICATION EST FOURNIE « EN L'ÉTAT » ET « SELON DISPONIBILITÉ », SANS GARANTIE DE QUALITÉ MARCHANDE, D'ABSENCE DE CONTREFAÇON OU D'ADÉQUATION À UN USAGE PARTICULIER.",
+          "NOUS NE GARANTISSONS PAS QUE L'APPLICATION SERA SANS ERREUR, SÉCURISÉE, EXEMPTE DE COMPOSANTS NUISIBLES, QUE LES DÉFAUTS SERONT CORRIGÉS, NI QUE LES RÉSULTATS OBTENUS PAR L'UTILISATION DE L'APPLICATION SERONT EXACTS OU FIABLES."
         ]
       },
       {
         "title": "6. Limitation de responsabilité",
         "content": [
-          "EN AUCUN CAS NOVA SOLUTIONS GROUP, LLC, SES SOCIÉTÉS AFFILIÉES, OU LEURS CONCÉDANTS DE LICENCE, PRESTATAIRES DE SERVICES, EMPLOYÉS, AGENTS, DIRIGEANTS OU ADMINISTRATEURS NE POURRONT ÊTRE TENUS RESPONSABLES DE TOUT DOMMAGE DE QUELQUE NATURE QUE CE SOIT RÉSULTANT DE OU EN RAPPORT AVEC VOTRE UTILISATION, OU VOTRE INCAPACITÉ À UTILISER, L'APPLICATION, Y COMPRIS LES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, CONSÉCUTIFS, SPÉCIAUX OU PUNITIFS, MÊME S'ILS ÉTAIENT PRÉVISIBLES."
+          "DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI, NOVA SOLUTIONS GROUP, LLC, SES AFFILIÉS, CONCÉDANTS, PRESTATAIRES, EMPLOYÉS, AGENTS, DIRIGEANTS ET ADMINISTRATEURS NE SERONT PAS RESPONSABLES DES DOMMAGES RÉSULTANT DE OU LIÉS À VOTRE UTILISATION, OU VOTRE INCAPACITÉ À UTILISER, L'APPLICATION, Y COMPRIS LES BLESSURES CORPORELLES, LE DÉCÈS, LES DOMMAGES MATÉRIELS, LA PERTE DE PROFITS, LA PERTE DE DONNÉES, L'INTERRUPTION D'ACTIVITÉ OU TOUT DOMMAGE DIRECT, INDIRECT, ACCESSOIRE, CONSÉCUTIF, SPÉCIAL, EXEMPLAIRE OU PUNITIF.",
+          "CETTE LIMITATION S'APPLIQUE QUELLE QUE SOIT LA THÉORIE JURIDIQUE (CONTRAT, RESPONSABILITÉ DÉLICTUELLE, NÉGLIGENCE, RESPONSABILITÉ SANS FAUTE OU AUTRE), MÊME SI UN RECOURS ÉCHOUE À REMPLIR SON OBJET ESSENTIEL.",
+          "DANS LA MESURE MAXIMALE AUTORISÉE PAR LA LOI, NOTRE RESPONSABILITÉ TOTALE CUMULÉE POUR TOUTES LES RÉCLAMATIONS LIÉES À L'APPLICATION N'EXCÉDERA PAS LE MONTANT LE PLUS ÉLEVÉ ENTRE (A) LE MONTANT QUE VOUS AVEZ PAYÉ POUR POWERTREAD DANS LES 12 MOIS PRÉCÉDANT L'ÉVÉNEMENT À L'ORIGINE DE LA RÉCLAMATION ET (B) 50 USD."
         ]
       },
       {
-        "title": "7. Modifications des présentes Conditions",
+        "title": "7. Indemnisation",
+        "content": [
+          "Vous acceptez de défendre, indemniser et dégager de toute responsabilité NoVa Solutions Group, LLC, ses affiliés, concédants et prestataires, ainsi que leurs dirigeants, administrateurs, employés et agents respectifs, contre toute réclamation, responsabilité, dommage, perte, jugement, condamnation, coût et dépense (y compris les honoraires raisonnables d'avocat) résultant de ou liés à votre utilisation de l'Application, à votre violation des présentes Conditions ou à votre mauvaise utilisation d'équipements connectés."
+        ]
+      },
+      {
+        "title": "8. Modifications des présentes Conditions",
         "content": [
           "Nous pouvons réviser les présentes Conditions à notre discrétion. Les modifications prennent effet dès leur publication et s'appliquent à toute utilisation ultérieure de l'Application. La poursuite de l'utilisation après les mises à jour signifie que vous acceptez les Conditions révisées."
         ]
       },
       {
-        "title": "8. Droit applicable et juridiction",
+        "title": "9. Droit applicable et juridiction",
         "content": [
           "Les présentes Conditions et tout litige lié à l'Application sont régis par les lois de l'État de Virginie (Commonwealth of Virginia), sans égard aux principes de conflit de lois."
         ]
       },
       {
-        "title": "9. Coordonnées",
+        "title": "10. Coordonnées",
         "content": [
           "Si vous avez des questions concernant les présentes Conditions, contactez :",
           "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:support@powertread.fit\">support@powertread.fit</a>"

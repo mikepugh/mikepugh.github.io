@@ -254,7 +254,7 @@
   },
   "terms": {
     "title": "Terms of Service",
-    "lastUpdated": "Last Updated: February 9, 2026",
+    "lastUpdated": "Last Updated: February 15, 2026",
     "intro": "Welcome to PowerTread. These Terms of Service (\u201cTerms\u201d) govern your use of the PowerTread mobile application (the \u201cApp\u201d), provided by NoVa Solutions Group, LLC (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d). By downloading, installing, or using the App, you agree to be bound by these Terms.",
     "sections": [
       {
@@ -298,32 +298,41 @@
         ]
       },
       {
-        "title": "5. Disclaimer of Warranties",
+        "title": "5. No Warranty",
         "content": [
-          "THE APP IS PROVIDED ON AN \u201cAS IS\u201d AND \u201cAS AVAILABLE\u201d BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE.",
-          "WE DO NOT WARRANT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS, OR THAT DEFECTS WILL BE CORRECTED. WE DO NOT WARRANT THE ACCURACY OR RELIABILITY OF RESULTS FROM APP USE."
+          "PowerTread is provided \u201cas is\u201d without warranties of any kind, express or implied. We make no guarantees regarding treadmill performance, Bluetooth connectivity, equipment behavior, or uninterrupted operation while connected to the app.",
+          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE APP IS PROVIDED ON AN \u201cAS IS\u201d AND \u201cAS AVAILABLE\u201d BASIS, INCLUDING WITHOUT WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE.",
+          "WE DO NOT WARRANT THE APP WILL BE ERROR-FREE, SECURE, OR FREE OF HARMFUL COMPONENTS, THAT DEFECTS WILL BE CORRECTED, OR THAT RESULTS FROM APP USE WILL BE ACCURATE OR RELIABLE."
         ]
       },
       {
         "title": "6. Limitation of Liability",
         "content": [
-          "IN NO EVENT WILL NOVA SOLUTIONS GROUP, LLC, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE APP, INCLUDING DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES, EVEN IF FORESEEABLE."
+          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, NOVA SOLUTIONS GROUP, LLC, ITS AFFILIATES, LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, AND DIRECTORS WILL NOT BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF, OR INABILITY TO USE, THE APP, INCLUDING PERSONAL INJURY, DEATH, PROPERTY DAMAGE, LOST PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, OR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES.",
+          "THIS LIMITATION APPLIES REGARDLESS OF THE LEGAL THEORY (CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE) AND EVEN IF ANY REMEDY FAILS OF ITS ESSENTIAL PURPOSE.",
+          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL CUMULATIVE LIABILITY FOR ALL CLAIMS RELATING TO THE APP WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID FOR POWERTREAD IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM OR (B) USD $50."
         ]
       },
       {
-        "title": "7. Changes to These Terms",
+        "title": "7. Indemnification",
+        "content": [
+          "You agree to defend, indemnify, and hold harmless NoVa Solutions Group, LLC, its affiliates, licensors, and service providers, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, judgments, awards, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your use of the App, your violation of these Terms, or your misuse of connected equipment."
+        ]
+      },
+      {
+        "title": "8. Changes to These Terms",
         "content": [
           "We may revise these Terms at our discretion. Changes are effective when posted and apply to all use of the App thereafter. Continued use after updates means you accept the revised Terms."
         ]
       },
       {
-        "title": "8. Governing Law and Jurisdiction",
+        "title": "9. Governing Law and Jurisdiction",
         "content": [
           "These Terms and any disputes related to the App are governed by the laws of the Commonwealth of Virginia, without regard to conflict of law principles."
         ]
       },
       {
-        "title": "9. Contact Information",
+        "title": "10. Contact Information",
         "content": [
           "If you have questions about these Terms, contact:",
           "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:support@powertread.fit\">support@powertread.fit</a>"

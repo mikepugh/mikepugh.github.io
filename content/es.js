@@ -254,7 +254,7 @@
   },
   "terms": {
     "title": "T\u00e9rminos de Servicio",
-    "lastUpdated": "Last Updated: February 9, 2026",
+    "lastUpdated": "Last Updated: February 15, 2026",
     "intro": "Bienvenido a PowerTread. Estos T\u00e9rminos de Servicio (\"T\u00e9rminos\") rigen el uso de la aplicaci\u00f3n m\u00f3vil PowerTread (la \"Aplicaci\u00f3n\"), proporcionada por NoVa Solutions Group, LLC (\"nosotros\" o \"nuestro/a\"). Al descargar, instalar o utilizar la Aplicaci\u00f3n, usted acepta quedar vinculado por estos T\u00e9rminos.",
     "sections": [
       {
@@ -298,32 +298,41 @@
         ]
       },
       {
-        "title": "5. Renuncia de Garant\u00edas",
+        "title": "5. Sin Garant\u00eda",
         "content": [
-          "LA APLICACI\u00d3N SE PROPORCIONA \"TAL CUAL\" Y \"SEG\u00daN DISPONIBILIDAD\", SIN GARANT\u00cdAS DE NING\u00daN TIPO, EXPRESAS O IMPL\u00cdCITAS, INCLUYENDO GARANT\u00cdAS DE COMERCIABILIDAD, NO INFRACCI\u00d3N O IDONEIDAD PARA UN PROP\u00d3SITO PARTICULAR.",
-          "NO GARANTIZAMOS QUE LA APLICACI\u00d3N SER\u00c1 ININTERRUMPIDA, LIBRE DE ERRORES O LIBRE DE COMPONENTES DA\u00d1INOS, NI QUE LOS DEFECTOS SER\u00c1N CORREGIDOS. NO GARANTIZAMOS LA EXACTITUD NI LA FIABILIDAD DE LOS RESULTADOS OBTENIDOS DEL USO DE LA APLICACI\u00d3N."
+          "PowerTread se proporciona \"tal cual\", sin garant\u00edas de ning\u00fan tipo, expresas o impl\u00edcitas. No ofrecemos garant\u00edas sobre el rendimiento de la cinta de correr, la conectividad Bluetooth, el comportamiento del equipo ni el funcionamiento ininterrumpido mientras la aplicaci\u00f3n est\u00e1 conectada.",
+          "EN LA M\u00c1XIMA MEDIDA PERMITIDA POR LA LEY, LA APLICACI\u00d3N SE PROPORCIONA \"TAL CUAL\" Y \"SEG\u00daN DISPONIBILIDAD\", INCLUYENDO SIN GARANT\u00cdAS DE COMERCIABILIDAD, NO INFRACCI\u00d3N O IDONEIDAD PARA UN PROP\u00d3SITO PARTICULAR.",
+          "NO GARANTIZAMOS QUE LA APLICACI\u00d3N SER\u00c1 LIBRE DE ERRORES, SEGURA, NI LIBRE DE COMPONENTES DA\u00d1INOS, QUE LOS DEFECTOS SER\u00c1N CORREGIDOS, O QUE LOS RESULTADOS OBTENIDOS DEL USO DE LA APLICACI\u00d3N SER\u00c1N EXACTOS O FIABLES."
         ]
       },
       {
         "title": "6. Limitaci\u00f3n de Responsabilidad",
         "content": [
-          "EN NING\u00daN CASO NOVA SOLUTIONS GROUP, LLC, SUS AFILIADOS, NI SUS LICENCIANTES, PROVEEDORES DE SERVICIOS, EMPLEADOS, AGENTES, FUNCIONARIOS O DIRECTORES SER\u00c1N RESPONSABLES POR DA\u00d1OS DE CUALQUIER TIPO QUE SURJAN DE O EN CONEXI\u00d3N CON EL USO O LA IMPOSIBILIDAD DE USO DE LA APLICACI\u00d3N, INCLUYENDO DA\u00d1OS DIRECTOS, INDIRECTOS, INCIDENTALES, CONSECUENCIALES, ESPECIALES O PUNITIVOS, INCLUSO SI FUERAN PREVISIBLES."
+          "EN LA M\u00c1XIMA MEDIDA PERMITIDA POR LA LEY, NOVA SOLUTIONS GROUP, LLC, SUS AFILIADOS, LICENCIANTES, PROVEEDORES DE SERVICIOS, EMPLEADOS, AGENTES, FUNCIONARIOS Y DIRECTORES NO SER\u00c1N RESPONSABLES POR DA\u00d1OS QUE SURJAN DE O EST\u00c9N RELACIONADOS CON SU USO, O IMPOSIBILIDAD DE USO, DE LA APLICACI\u00d3N, INCLUYENDO LESIONES PERSONALES, MUERTE, DA\u00d1OS A LA PROPIEDAD, P\u00c9RDIDA DE BENEFICIOS, P\u00c9RDIDA DE DATOS, INTERRUPCI\u00d3N DEL NEGOCIO O DA\u00d1OS DIRECTOS, INDIRECTOS, INCIDENTALES, CONSECUENCIALES, ESPECIALES, EJEMPLARES O PUNITIVOS.",
+          "ESTA LIMITACI\u00d3N SE APLICA INDEPENDIENTEMENTE DE LA TEOR\u00cdA JUR\u00cdDICA (CONTRATO, RESPONSABILIDAD EXTRACONTRACTUAL, NEGLIGENCIA, RESPONSABILIDAD ESTRICTA U OTRA), INCLUSO SI CUALQUIER RECURSO NO CUMPLE SU FINALIDAD ESENCIAL.",
+          "EN LA M\u00c1XIMA MEDIDA PERMITIDA POR LA LEY, NUESTRA RESPONSABILIDAD TOTAL ACUMULADA POR TODAS LAS RECLAMACIONES RELACIONADAS CON LA APLICACI\u00d3N NO EXCEDER\u00c1 EL MAYOR DE (A) EL MONTO QUE USTED PAG\u00d3 POR POWERTREAD EN LOS 12 MESES ANTERIORES AL HECHO QUE DIO ORIGEN A LA RECLAMACI\u00d3N O (B) USD $50."
         ]
       },
       {
-        "title": "7. Cambios a Estos T\u00e9rminos",
+        "title": "7. Indemnizaci\u00f3n",
+        "content": [
+          "Usted acepta defender, indemnizar y mantener indemne a NoVa Solutions Group, LLC, sus afiliados, licenciantes y proveedores de servicios, y a sus respectivos funcionarios, directores, empleados y agentes, frente a cualquier reclamaci\u00f3n, responsabilidad, da\u00f1o, p\u00e9rdida, sentencia, laudo, costo y gasto (incluidos honorarios razonables de abogados) que surjan de o se relacionen con su uso de la Aplicaci\u00f3n, su incumplimiento de estos T\u00e9rminos o su uso indebido de equipos conectados."
+        ]
+      },
+      {
+        "title": "8. Cambios a Estos T\u00e9rminos",
         "content": [
           "Podemos revisar estos T\u00e9rminos a nuestra discreci\u00f3n. Los cambios entran en vigor cuando se publican y se aplican a todo uso de la Aplicaci\u00f3n a partir de ese momento. El uso continuado despu\u00e9s de las actualizaciones significa que usted acepta los T\u00e9rminos revisados."
         ]
       },
       {
-        "title": "8. Ley Aplicable y Jurisdicci\u00f3n",
+        "title": "9. Ley Aplicable y Jurisdicci\u00f3n",
         "content": [
           "Estos T\u00e9rminos y cualquier disputa relacionada con la Aplicaci\u00f3n se rigen por las leyes del Estado Libre Asociado de Virginia (Commonwealth of Virginia), sin consideraci\u00f3n a los principios de conflicto de leyes."
         ]
       },
       {
-        "title": "9. Informaci\u00f3n de Contacto",
+        "title": "10. Informaci\u00f3n de Contacto",
         "content": [
           "Si tiene preguntas sobre estos T\u00e9rminos, contacte a:",
           "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:support@powertread.fit\">support@powertread.fit</a>"

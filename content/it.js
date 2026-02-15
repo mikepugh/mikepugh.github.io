@@ -254,7 +254,7 @@
   },
   "terms": {
     "title": "Termini di Servizio",
-    "lastUpdated": "Last Updated: February 9, 2026",
+    "lastUpdated": "Last Updated: February 15, 2026",
     "intro": "Benvenuto/a su PowerTread. I presenti Termini di Servizio (\"Termini\") disciplinano l'utilizzo dell'applicazione mobile PowerTread (l'\"App\"), fornita da NoVa Solutions Group, LLC (\"noi\" o \"nostro/a/i/e\"). Scaricando, installando o utilizzando l'App, Lei accetta di essere vincolato/a dai presenti Termini.",
     "sections": [
       {
@@ -298,32 +298,41 @@
         ]
       },
       {
-        "title": "5. Esclusione di Garanzie",
+        "title": "5. Nessuna Garanzia",
         "content": [
-          "L'APP \u00c8 FORNITA \"COS\u00cc COM'\u00c8\" E \"COME DISPONIBILE\", SENZA GARANZIE DI ALCUN TIPO, ESPRESSE O IMPLICITE, INCLUSE LE GARANZIE DI COMMERCIABILIT\u00c0, NON VIOLAZIONE DI DIRITTI DI TERZI O IDONEIT\u00c0 A UNO SCOPO PARTICOLARE.",
-          "NON GARANTIAMO CHE L'APP SAR\u00c0 ININTERROTTA, PRIVA DI ERRORI O DI COMPONENTI DANNOSI, N\u00c9 CHE I DIFETTI SARANNO CORRETTI. NON GARANTIAMO L'ACCURATEZZA O L'AFFIDABILIT\u00c0 DEI RISULTATI DERIVANTI DALL'UTILIZZO DELL'APP."
+          "PowerTread \u00e8 fornita \"cos\u00ec com'\u00e8\" senza garanzie di alcun tipo, espresse o implicite. Non forniamo alcuna garanzia riguardo alle prestazioni del tapis roulant, alla connettivit\u00e0 Bluetooth, al comportamento dell'attrezzatura o al funzionamento ininterrotto durante la connessione all'app.",
+          "NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE, L'APP \u00c8 FORNITA \"COS\u00cc COM'\u00c8\" E \"COME DISPONIBILE\", SENZA GARANZIE DI COMMERCIABILIT\u00c0, NON VIOLAZIONE O IDONEIT\u00c0 A UNO SCOPO PARTICOLARE.",
+          "NON GARANTIAMO CHE L'APP SAR\u00c0 PRIVA DI ERRORI, SICURA O ESENTE DA COMPONENTI DANNOSI, CHE I DIFETTI SARANNO CORRETTI, O CHE I RISULTATI DERIVANTI DALL'USO DELL'APP SARANNO ACCURATI O AFFIDABILI."
         ]
       },
       {
         "title": "6. Limitazione di Responsabilit\u00e0",
         "content": [
-          "IN NESSUN CASO NOVA SOLUTIONS GROUP, LLC, LE SUE AFFILIATE O I RISPETTIVI LICENZIATARI, FORNITORI DI SERVIZI, DIPENDENTI, AGENTI, FUNZIONARI O AMMINISTRATORI SARANNO RESPONSABILI PER DANNI DI QUALSIASI NATURA DERIVANTI DA O COLLEGATI ALL'UTILIZZO, O ALL'IMPOSSIBILIT\u00c0 DI UTILIZZO, DELL'APP, INCLUSI DANNI DIRETTI, INDIRETTI, INCIDENTALI, CONSEQUENZIALI, SPECIALI O PUNITIVI, ANCHE SE PREVEDIBILI."
+          "NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE, NOVA SOLUTIONS GROUP, LLC, LE SUE AFFILIATE, I LICENZIATARI, I FORNITORI DI SERVIZI, I DIPENDENTI, GLI AGENTI, I FUNZIONARI E GLI AMMINISTRATORI NON SARANNO RESPONSABILI PER DANNI DERIVANTI DA O RELATIVI AL SUO UTILIZZO, O ALL'IMPOSSIBILIT\u00c0 DI UTILIZZO, DELL'APP, INCLUSI LESIONI PERSONALI, MORTE, DANNI A BENI, PERDITA DI PROFITTI, PERDITA DI DATI, INTERRUZIONE DELL'ATTIVIT\u00c0 O DANNI DIRETTI, INDIRETTI, INCIDENTALI, CONSEQUENZIALI, SPECIALI, ESEMPLARI O PUNITIVI.",
+          "QUESTA LIMITAZIONE SI APPLICA A QUALSIASI TEORIA GIURIDICA (CONTRATTO, ILLECITO, NEGLIGENZA, RESPONSABILIT\u00c0 OGGETTIVA O ALTRO), ANCHE SE QUALSIASI RIMEDIO NON RAGGIUNGE IL SUO SCOPO ESSENZIALE.",
+          "NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE, LA NOSTRA RESPONSABILIT\u00c0 COMPLESSIVA CUMULATIVA PER TUTTI I RECLAMI RELATIVI ALL'APP NON SUPERER\u00c0 IL MAGGIORE TRA (A) L'IMPORTO CHE LEI HA PAGATO PER POWERTREAD NEI 12 MESI PRECEDENTI ALL'EVENTO CHE HA DATO ORIGINE AL RECLAMO E (B) USD $50."
         ]
       },
       {
-        "title": "7. Modifiche ai Presenti Termini",
+        "title": "7. Manleva e Indennizzo",
+        "content": [
+          "Lei accetta di difendere, manlevare e tenere indenne NoVa Solutions Group, LLC, le sue affiliate, i licenziatari e i fornitori di servizi, nonch\u00e9 i rispettivi funzionari, amministratori, dipendenti e agenti, da qualsiasi reclamo, responsabilit\u00e0, danno, perdita, sentenza, provvedimento, costo e spesa (incluse ragionevoli spese legali) derivanti da o relativi al Suo utilizzo dell'App, alla violazione dei presenti Termini o all'uso improprio di attrezzature connesse."
+        ]
+      },
+      {
+        "title": "8. Modifiche ai Presenti Termini",
         "content": [
           "Potremmo rivedere i presenti Termini a nostra discrezione. Le modifiche diventano effettive al momento della pubblicazione e si applicano a qualsiasi utilizzo successivo dell'App. L'uso continuato dopo gli aggiornamenti implica l'accettazione dei Termini rivisti."
         ]
       },
       {
-        "title": "8. Legge Applicabile e Giurisdizione",
+        "title": "9. Legge Applicabile e Giurisdizione",
         "content": [
           "I presenti Termini e qualsiasi controversia relativa all'App sono disciplinati dalle leggi del Commonwealth della Virginia, senza riguardo ai principi di conflitto di leggi."
         ]
       },
       {
-        "title": "9. Informazioni di Contatto",
+        "title": "10. Informazioni di Contatto",
         "content": [
           "Per qualsiasi domanda relativa ai presenti Termini, contattare:",
           "NoVa Solutions Group, LLC<br>Email: <a href=\"mailto:support@powertread.fit\">support@powertread.fit</a>"
