@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    // Redirect all 404s back to the SPA shell.
+    // Preserves the path as a hash route so the client-side router can handle it.
+    var path = location.pathname.replace(/\/$/, '').split('/').pop();
+    var known = { privacy: 1, terms: 1 };
+    location.replace('/' + (known[path] ? '#/' + path : '#/'));
+  </script>
+</head>
+<body></body>
+</html>
