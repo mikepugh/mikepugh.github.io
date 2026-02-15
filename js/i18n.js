@@ -1,72 +1,69 @@
 /* ───────────────────────────────────────────────
    PowerTread SPA — Internationalization Module
+   Reads locale data from window.PT_LOCALES
+   (populated by content/*.js script tags)
    ─────────────────────────────────────────────── */
 
-const SUPPORTED_LOCALES = {
-  en: 'English',
-  fr: 'Français',
-  es: 'Español',
-  it: 'Italiano'
-};
+(function () {
+  'use strict';
 
-const STORAGE_KEY = 'pt-locale';
-const DEFAULT_LOCALE = 'en';
+  var SUPPORTED_LOCALES = {
+    en: 'English',
+    fr: 'Français',
+    es: 'Español',
+    it: 'Italiano'
+  };
 
-let currentLocale = DEFAULT_LOCALE;
-let strings = {};
-let onLocaleChange = null;
+  var STORAGE_KEY = 'pt-locale';
+  var DEFAULT_LOCALE = 'en';
 
-/** Detect the best locale from the browser */
-function detectLocale() {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored && SUPPORTED_LOCALES[stored]) return stored;
+  var currentLocale = DEFAULT_LOCALE;
+  var strings = {};
 
-  const langs = navigator.languages || [navigator.language || ''];
-  for (const lang of langs) {
-    const code = lang.split('-')[0].toLowerCase();
-    if (SUPPORTED_LOCALES[code]) return code;
+  /** Detect the best locale from the browser */
+  function detectLocale() {
+    try {
+      var stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && SUPPORTED_LOCALES[stored]) return stored;
+    } catch (e) { /* localStorage unavailable */ }
+
+    var langs = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < langs.length; i++) {
+      var code = langs[i].split('-')[0].toLowerCase();
+      if (SUPPORTED_LOCALES[code]) return code;
+    }
+    return DEFAULT_LOCALE;
   }
-  return DEFAULT_LOCALE;
-}
 
-/** Load a locale's JSON content file */
-async function loadLocale(locale) {
-  const resp = await fetch(`content/${locale}.json`);
-  if (!resp.ok) throw new Error(`Failed to load locale: ${locale}`);
-  return resp.json();
-}
+  /** Initialize — pick locale and load strings from the global */
+  function init() {
+    currentLocale = detectLocale();
+    var locales = window.PT_LOCALES || {};
+    strings = locales[currentLocale] || locales[DEFAULT_LOCALE] || {};
+    return strings;
+  }
 
-/** Initialize the i18n system */
-async function init(changeCallback) {
-  onLocaleChange = changeCallback;
-  currentLocale = detectLocale();
-  strings = await loadLocale(currentLocale);
-  return strings;
-}
+  /** Switch to a different locale */
+  function setLocale(locale) {
+    if (!SUPPORTED_LOCALES[locale] || locale === currentLocale) return;
+    currentLocale = locale;
+    try { localStorage.setItem(STORAGE_KEY, locale); } catch (e) { /* ok */ }
+    var locales = window.PT_LOCALES || {};
+    strings = locales[locale] || locales[DEFAULT_LOCALE] || {};
+    document.documentElement.lang = locale;
+    return strings;
+  }
 
-/** Switch to a different locale */
-async function setLocale(locale) {
-  if (!SUPPORTED_LOCALES[locale] || locale === currentLocale) return;
-  currentLocale = locale;
-  localStorage.setItem(STORAGE_KEY, locale);
-  strings = await loadLocale(locale);
-  document.documentElement.lang = locale;
-  if (onLocaleChange) onLocaleChange(strings);
-}
+  function getLocale() { return currentLocale; }
+  function getStrings() { return strings; }
+  function getLocales() { return SUPPORTED_LOCALES; }
 
-/** Get the current locale code */
-function getLocale() {
-  return currentLocale;
-}
-
-/** Get the current strings object */
-function getStrings() {
-  return strings;
-}
-
-/** Get all supported locales */
-function getLocales() {
-  return SUPPORTED_LOCALES;
-}
-
-export { init, setLocale, getLocale, getStrings, getLocales };
+  // Expose on a namespace
+  window.PTi18n = {
+    init: init,
+    setLocale: setLocale,
+    getLocale: getLocale,
+    getStrings: getStrings,
+    getLocales: getLocales
+  };
+})();

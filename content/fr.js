@@ -1,4 +1,5 @@
-{
+/* PowerTread — French locale */
+(window.PT_LOCALES = window.PT_LOCALES || {}).fr = {
   "meta": {
     "title": "PowerTread — Dominez n'importe quel parcours, en intérieur.",
     "description": "PowerTread offre une simulation de parcours réels, des entraînements structurés, une puissance ajustée selon l'inclinaison et la synchronisation d'activités pour les coureurs en intérieur."
@@ -330,4 +331,4 @@
       }
     ]
   }
-}
+};

@@ -1,4 +1,5 @@
-{
+/* PowerTread — English locale */
+(window.PT_LOCALES = window.PT_LOCALES || {}).en = {
   "meta": {
     "title": "PowerTread — Conquer Any Course, Indoors.",
     "description": "PowerTread delivers real-world course simulation, structured workouts, incline-adjusted power, and activity sync for indoor runners."
@@ -28,7 +29,7 @@
   },
   "features": {
     "kicker": "Core Features",
-    "title": "Train like race day, even when you're indoors",
+    "title": "Train like race day, even when you\u2019re indoors",
     "subtitle": "PowerTread combines realistic terrain simulation, structured workouts, and seamless activity sync in one focused running platform.",
     "items": [
       {
@@ -70,7 +71,7 @@
       {
         "kicker": "Planning",
         "title": "Bring your planned workouts into one clean view",
-        "description": "Choose today's session quickly and move from planning to execution without bouncing between multiple apps.",
+        "description": "Choose today\u2019s session quickly and move from planning to execution without bouncing between multiple apps.",
         "image": "screenshots/view-todays-planned-workouts.png",
         "imageAlt": "PowerTread workout library with planned sessions",
         "caption": "Import planned sessions and start the right workout in seconds."
@@ -130,7 +131,7 @@
       },
       {
         "question": "Do I have to simulate a course to use the app?",
-        "answer": "No. PowerTread can run in Passive mode, where it records your session data and automatically adjusts power meter readings based on the treadmill's current incline. If you control incline manually on the treadmill, a single Bluetooth connection is enough. Two Bluetooth connections are only needed when another app, such as Zwift, is controlling incline while PowerTread is connected to read incline and record data."
+        "answer": "No. PowerTread can run in Passive mode, where it records your session data and automatically adjusts power meter readings based on the treadmill\u2019s current incline. If you control incline manually on the treadmill, a single Bluetooth connection is enough. Two Bluetooth connections are only needed when another app, such as Zwift, is controlling incline while PowerTread is connected to read incline and record data."
       },
       {
         "question": "Do I need to buy a subscription to PowerTread?",
@@ -138,7 +139,7 @@
       },
       {
         "question": "What features are free to use?",
-        "answer": "PowerTread's sample courses, sample workouts, and Passive mode are available free of charge, with no usage limits."
+        "answer": "PowerTread\u2019s sample courses, sample workouts, and Passive mode are available free of charge, with no usage limits."
       },
       {
         "question": "What features require PowerTread Pro?",
@@ -151,7 +152,7 @@
     ]
   },
   "footer": {
-    "copyright": "© 2026 NoVa Solutions Group, LLC. All rights reserved. PowerTread is a trademark of NoVa Solutions Group, LLC."
+    "copyright": "\u00a9 2026 NoVa Solutions Group, LLC. All rights reserved. PowerTread is a trademark of NoVa Solutions Group, LLC."
   },
   "common": {
     "returnToSite": "Return to Site",
@@ -160,7 +161,7 @@
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last Updated: February 9, 2026",
-    "intro": "This Privacy Policy describes how the PowerTread mobile application (the \"App\"), provided by NoVa Solutions Group, LLC (\"we,\" \"us,\" or \"our\"), handles your information.",
+    "intro": "This Privacy Policy describes how the PowerTread mobile application (the \u201cApp\u201d), provided by NoVa Solutions Group, LLC (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d), handles your information.",
     "sections": [
       {
         "title": "1. Privacy-First Data Approach",
@@ -201,7 +202,7 @@
           "Your personal workout data is not shared by NoVa Solutions Group except through actions you explicitly authorize:"
         ],
         "list": [
-          "<strong>Optional Third-Party Integrations:</strong> You may connect services like Strava. When authorized, data is shared directly between your device and the selected platform under that platform's terms/privacy policy.",
+          "<strong>Optional Third-Party Integrations:</strong> You may connect services like Strava. When authorized, data is shared directly between your device and the selected platform under that platform\u2019s terms/privacy policy.",
           "<strong>Your Control:</strong> You can authorize or revoke third-party integrations at any time from App settings.",
           "<strong>Diagnostics Service Providers:</strong> We may use trusted providers to process anonymous crash/error diagnostics on our behalf, solely for app reliability and security support."
         ]
@@ -231,7 +232,7 @@
         ]
       },
       {
-        "title": "8. Children's Privacy",
+        "title": "8. Children\u2019s Privacy",
         "content": [
           "The App is not intended for children under 13. We do not knowingly collect personal information from children under 13."
         ]
@@ -239,7 +240,7 @@
       {
         "title": "9. Changes to This Privacy Policy",
         "content": [
-          "We may update this policy from time to time. Changes are effective when posted on this page with an updated \"Last Updated\" date."
+          "We may update this policy from time to time. Changes are effective when posted on this page with an updated \u201cLast Updated\u201d date."
         ]
       },
       {
@@ -254,7 +255,7 @@
   "terms": {
     "title": "Terms of Service",
     "lastUpdated": "Last Updated: February 9, 2026",
-    "intro": "Welcome to PowerTread. These Terms of Service (\"Terms\") govern your use of the PowerTread mobile application (the \"App\"), provided by NoVa Solutions Group, LLC (\"we,\" \"us,\" or \"our\"). By downloading, installing, or using the App, you agree to be bound by these Terms.",
+    "intro": "Welcome to PowerTread. These Terms of Service (\u201cTerms\u201d) govern your use of the PowerTread mobile application (the \u201cApp\u201d), provided by NoVa Solutions Group, LLC (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d). By downloading, installing, or using the App, you agree to be bound by these Terms.",
     "sections": [
       {
         "title": "1. No Account Required & Data Handling",
@@ -271,7 +272,7 @@
         ],
         "list": [
           "You can authorize and deactivate these integrations at any time within App settings.",
-          "When authorized, data is shared directly between your device and the selected service, subject to that service's terms and privacy policy.",
+          "When authorized, data is shared directly between your device and the selected service, subject to that service\u2019s terms and privacy policy.",
           "We are not responsible for third-party data practices."
         ]
       },
@@ -299,7 +300,7 @@
       {
         "title": "5. Disclaimer of Warranties",
         "content": [
-          "THE APP IS PROVIDED ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE.",
+          "THE APP IS PROVIDED ON AN \u201cAS IS\u201d AND \u201cAS AVAILABLE\u201d BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE.",
           "WE DO NOT WARRANT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF HARMFUL COMPONENTS, OR THAT DEFECTS WILL BE CORRECTED. WE DO NOT WARRANT THE ACCURACY OR RELIABILITY OF RESULTS FROM APP USE."
         ]
       },
@@ -330,4 +331,4 @@
       }
     ]
   }
-}
+};
