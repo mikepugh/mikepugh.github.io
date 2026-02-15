@@ -54,15 +54,20 @@
             '<img src="latest-appicon.png" alt="PowerTread app icon" width="40" height="40">' +
             '<span>PowerTread</span>' +
           '</a>' +
-          '<nav class="site-nav">' + navLinks + '</nav>' +
-          '<div class="lang-switcher">' +
-            '<button class="lang-btn" aria-label="Change language" aria-expanded="false">' +
-              '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>' +
-              locales[current] +
-            '</button>' +
-            '<div class="lang-menu">' + langOptions + '</div>' +
+          '<button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">' +
+            '<span class="hamburger-icon"></span>' +
+          '</button>' +
+          '<div class="mobile-menu">' +
+            '<nav class="site-nav">' + navLinks + '</nav>' +
+            '<div class="lang-switcher">' +
+              '<button class="lang-btn" aria-label="Change language" aria-expanded="false">' +
+                '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>' +
+                locales[current] +
+              '</button>' +
+              '<div class="lang-menu">' + langOptions + '</div>' +
+            '</div>' +
+            '<div class="status-badge">' + statusText + '</div>' +
           '</div>' +
-          '<div class="status-badge">' + statusText + '</div>' +
         '</div>' +
       '</header>';
   }
@@ -305,6 +310,7 @@
     window.scrollTo(0, 0);
     bindScrollButtons();
     bindLangSwitcher();
+    bindMobileToggle();
     teardownShowcase();
 
     if (route === 'home') {
@@ -320,6 +326,26 @@
         var id = this.getAttribute('data-scroll');
         var el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  }
+
+  function bindMobileToggle() {
+    var toggle = document.querySelector('.mobile-toggle');
+    var menu = document.querySelector('.mobile-menu');
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when a nav link is tapped
+    var links = menu.querySelectorAll('.nav-link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
       });
     }
   }
