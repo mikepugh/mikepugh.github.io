@@ -61,14 +61,36 @@ a:hover {
   justify-content: space-between;
 }
 
-.logo {
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+}
+
+.logo-link:hover {
+  opacity: 1;
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  padding: 6px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  object-fit: contain;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
 
-.logo span {
+.logo-text span {
   color: var(--text-secondary);
   font-weight: 400;
 }
@@ -317,5 +339,14 @@ a:hover {
   .site-header .container {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
   }
 }
